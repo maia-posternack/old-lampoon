@@ -1,12 +1,15 @@
 {
+  "redirects": [
+    {
+      "source": "/:folder/:slug/",
+      "destination": "/:folder/:slug",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/comedy/:slug/",
-      "destination": "/comedy/:slug.html"
-    },
-    {
-      "source": "/comedy/:slug",
-      "destination": "/comedy/:slug.html"
+      "source": "/:folder/:slug",
+      "destination": "/:folder/:slug.html"
     }
   ]
 }
