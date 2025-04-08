@@ -1,0 +1,91 @@
+/* @override 
+	http://harvardlampoon.com/static/css/search.css */
+
+/* ==== Common ==== */
+
+h1 {
+	margin:10px;
+}
+
+h3 {
+	margin:0px 0px 10px 0px;
+	text-align:left;
+}
+
+h4 {
+	font-size:1.3em;
+}
+
+/* ==== Search Navigation ==== */
+
+ul#searchnav {
+	margin-left: 40px;
+	font: italic 18px 'Lato', 'Gill Sans', Helvetica, sans-serif;
+}
+
+ul#searchnav > li {
+	margin:8px 0px;
+}
+
+/* ==== Search Display ==== */
+
+h3.resultsindic {
+	font-family: 'Lato';
+	margin: 10px 0px;
+	font-weight: 600;
+}
+
+.resultsindic em {
+	font-style: italic;
+}
+
+div.entry {
+	margin:0px 0px 50px 0px;
+	width:100%;
+	clear:both;
+}
+
+div.entry p {
+	text-align:left;
+}
+
+div.entry img {
+	width:80%;
+	margin:10px 10% -40px 10%;
+}
+
+div.comixentry h3 {
+	text-align:center;
+	margin:20px 0px 0px 0px;
+}
+
+div.comixentry img {
+	width:80%;
+	margin:10px 10% 20px 10%;
+}
+
+div.videntry {
+	width:100%;
+	padding:20px 15px;
+	clear:both;
+}
+
+div.vidthumb {
+	width:30%;
+	float:left;
+}
+
+div.vidthmb img {
+	width:30%;
+	float:left;
+}
+
+div.vidtitle {
+	width:60%;
+	padding-right:30px;
+	float:right;
+}
+
+div#comedy, div#issues, div#comix, div#videos {
+	margin-bottom: 20px;
+}

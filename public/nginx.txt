@@ -1,0 +1,480 @@
+
+# Redirect all extensions to html
+if ($is_args = ''){
+	rewrite ^([^.]*)\.shtml$ $1.html permanent;
+	rewrite ^([^.]*)\.phtml$ $1.html permanent;
+	rewrite ^([^.]*)\.jhtml$ $1.html permanent;
+	rewrite ^([^.]*)\.htm$ $1.html permanent;
+	rewrite ^([^.]*)\.php$ $1.html permanent;
+	rewrite ^([^.]*)\.aspx$ $1.html permanent;
+	rewrite ^([^.]*)\.asp$ $1.html permanent;
+	rewrite ^([^.]*)\.jsp$ $1.html permanent;
+	rewrite ^([^.]*)\.apk$ $1.html permanent;
+}
+# End: Redirect all extensions to html
+
+# Add a trailing slash (/) to a URL
+rewrite ^([^.]*[^/])$ $1/ permanent;
+
+# Create pretty URLs
+rewrite ^/([^/]+)/$ /$1.html last;
+rewrite ^/([^/]+)/([^/]+)/$ /$1/$2.html last;
+rewrite ^/([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3.html last;
+rewrite ^/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3/$4.html last;
+rewrite ^/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3/$4/$5.html last;
+rewrite ^/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3/$4/$5/$6.html last;
+rewrite ^/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3/$4/$5/$6/$7.html last;
+rewrite ^/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3/$4/$5/$6/$7/$8.html last;
+rewrite ^/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3/$4/$5/$6/$7/$8/$9.html last;
+rewrite ^/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3/$4/$5/$6/$7/$8/$9/$10.html last;
+# End: Create pretty URLs
+
+# Specific redirections
+rewrite ^/@jln21$ /-jln21/? permanent;
+rewrite ^/@NGH$ /-NGH/? permanent;
+rewrite ^/@JTK$ /-JTK/? permanent;
+rewrite ^/@ymc21$ /-ymc21/? permanent;
+rewrite ^/@mag21$ /-mag21/? permanent;
+rewrite ^/@mfp23$ /-mfp23/? permanent;
+rewrite ^/@GPCP$ /-GPCP/? permanent;
+rewrite ^/@jrd22$ /-jrd22/? permanent;
+rewrite ^/@OMA$ /-OMA/? permanent;
+rewrite ^/@ebc22$ /-ebc22/? permanent;
+rewrite ^/@FOD$ /-FOD/? permanent;
+rewrite ^/@CLC$ /-CLC/? permanent;
+if ($args ~* ^page=2&$){ rewrite ^/search/?$ /search/page-2-/? permanent; }
+if ($args ~* ^page=3&$){ rewrite ^/search/?$ /search/page-3-/? permanent; }
+if ($args ~* ^page=4&$){ rewrite ^/search/?$ /search/page-4-/? permanent; }
+if ($args ~* ^page=5&$){ rewrite ^/search/?$ /search/page-5-/? permanent; }
+if ($args ~* ^page=20&$){ rewrite ^/search/?$ /search/page-20-/? permanent; }
+rewrite ^/@lrk21$ /-lrk21/? permanent;
+rewrite ^/@TAF$ /-TAF/? permanent;
+rewrite ^/@bgs22$ /-bgs22/? permanent;
+rewrite ^/@mmm20$ /-mmm20/? permanent;
+rewrite ^/@NSG$ /-NSG/? permanent;
+rewrite ^/@gpl21$ /-gpl21/? permanent;
+rewrite ^/@jec21$ /-jec21/? permanent;
+rewrite ^/@SWR$ /-SWR/? permanent;
+rewrite ^/@cdl21$ /-cdl21/? permanent;
+rewrite ^/@KPB$ /-KPB/? permanent;
+rewrite ^/@lgf21$ /-lgf21/? permanent;
+if ($args ~* ^page=2&$){ rewrite ^/read/works/?$ /read/works/page-2-/? permanent; }
+if ($args ~* ^page=3&$){ rewrite ^/read/works/?$ /read/works/page-3-/? permanent; }
+if ($args ~* ^page=4&$){ rewrite ^/read/works/?$ /read/works/page-4-/? permanent; }
+if ($args ~* ^page=5&$){ rewrite ^/read/works/?$ /read/works/page-5-/? permanent; }
+if ($args ~* ^page=13&$){ rewrite ^/read/works/?$ /read/works/page-13-/? permanent; }
+if ($args ~* ^page=2&$){ rewrite ^/read/magazines/?$ /read/magazines/page-2-/? permanent; }
+rewrite ^/@JSR$ /-JSR/? permanent;
+rewrite ^/@ghost$ /-ghost/? permanent;
+rewrite ^/@AMC$ /-AMC/? permanent;
+rewrite ^/@gogo$ /-gogo/? permanent;
+rewrite ^/@test123$ /-test123/? permanent;
+rewrite ^/@admin$ /-admin/? permanent;
+rewrite ^/@ZPH$ /-ZPH/? permanent;
+rewrite ^/@ZDG20$ /-ZDG20/? permanent;
+rewrite ^/@yj21$ /-yj21/? permanent;
+rewrite ^/@wsi74$ /-wsi74/? permanent;
+rewrite ^/@jgs20$ /-jgs20/? permanent;
+rewrite ^/@wi11dey$ /-wi11dey/? permanent;
+if ($args ~* ^page=&$){ rewrite ^/search/?$ /search/page--/? permanent; }
+if ($args ~* ^page=1&$){ rewrite ^/search/?$ /search/page-1-/? permanent; }
+if ($args ~* ^page=6&$){ rewrite ^/search/?$ /search/page-6-/? permanent; }
+rewrite ^/@HJH19$ /-HJH19/? permanent;
+rewrite ^/@WBB$ /-WBB/? permanent;
+rewrite ^/@vin21$ /-vin21/? permanent;
+rewrite ^/@VG$ /-VG/? permanent;
+rewrite ^/@TBW$ /-TBW/? permanent;
+rewrite ^/@sw21$ /-sw21/? permanent;
+rewrite ^/@svg18$ /-svg18/? permanent;
+rewrite ^/@skl23$ /-skl23/? permanent;
+rewrite ^/@HBF$ /-HBF/? permanent;
+rewrite ^/@sey87$ /-sey87/? permanent;
+if ($args ~* ^page=7&$){ rewrite ^/search/?$ /search/page-7-/? permanent; }
+rewrite ^/@scs81$ /-scs81/? permanent;
+rewrite ^/@RMC95$ /-RMC95/? permanent;
+rewrite ^/@bwm19-21$ /-bwm19-21/? permanent;
+rewrite ^/@RIP$ /-RIP/? permanent;
+rewrite ^/@DJL$ /-DJL/? permanent;
+rewrite ^/@prs87$ /-prs87/? permanent;
+rewrite ^/@PKS$ /-PKS/? permanent;
+rewrite ^/@pam75$ /-pam75/? permanent;
+rewrite ^/@Owen$ /-Owen/? permanent;
+rewrite ^/@NHS$ /-NHS/? permanent;
+if ($args ~* ^page=8&$){ rewrite ^/search/?$ /search/page-8-/? permanent; }
+rewrite ^/@ngj21$ /-ngj21/? permanent;
+rewrite ^/@naa21$ /-naa21/? permanent;
+rewrite ^/@MVS$ /-MVS/? permanent;
+rewrite ^/@mmw84$ /-mmw84/? permanent;
+rewrite ^/@fss21$ /-fss21/? permanent;
+rewrite ^/@anonymous$ /-anonymous/? permanent;
+rewrite ^/@MJS$ /-MJS/? permanent;
+rewrite ^/@MGM$ /-MGM/? permanent;
+rewrite ^/@mav23$ /-mav23/? permanent;
+rewrite ^/@HHD$ /-HHD/? permanent;
+if ($args ~* ^page=16&$){ rewrite ^/search/?$ /search/page-16-/? permanent; }
+if ($args ~* ^page=17&$){ rewrite ^/search/?$ /search/page-17-/? permanent; }
+if ($args ~* ^page=18&$){ rewrite ^/search/?$ /search/page-18-/? permanent; }
+if ($args ~* ^page=19&$){ rewrite ^/search/?$ /search/page-19-/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/read/?$ /read_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/magazines/?$ /magazines_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/me-and-my-lovers/?$ /issue/me-and-my-lovers_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classics/?$ /classics_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/books/?$ /books_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/lame-of-thrones-preview/?$ /lame-of-thrones-preview_epcl-action-remove-notice/? permanent; }
+rewrite ^/@jlg21$ /-jlg21/? permanent;
+rewrite ^/@jpw22$ /-jpw22/? permanent;
+rewrite ^/@DRM$ /-DRM/? permanent;
+rewrite ^/@jtb20$ /-jtb20/? permanent;
+if ($args ~* ^page=&$){ rewrite ^/read/works/?$ /read/works/page--/? permanent; }
+if ($args ~* ^page=1&$){ rewrite ^/read/works/?$ /read/works/page-1-/? permanent; }
+if ($args ~* ^page=6&$){ rewrite ^/read/works/?$ /read/works/page-6-/? permanent; }
+rewrite ^/@ASB$ /-ASB/? permanent;
+rewrite ^/@CAS$ /-CAS/? permanent;
+if ($args ~* ^page=7&$){ rewrite ^/read/works/?$ /read/works/page-7-/? permanent; }
+rewrite ^/@JFAR19-20$ /-JFAR19-20/? permanent;
+rewrite ^/@mas18$ /-mas18/? permanent;
+rewrite ^/@HFJ$ /-HFJ/? permanent;
+if ($args ~* ^page=8&$){ rewrite ^/read/works/?$ /read/works/page-8-/? permanent; }
+rewrite ^/@eno21$ /-eno21/? permanent;
+if ($args ~* ^page=9&$){ rewrite ^/read/works/?$ /read/works/page-9-/? permanent; }
+if ($args ~* ^page=10&$){ rewrite ^/read/works/?$ /read/works/page-10-/? permanent; }
+if ($args ~* ^page=11&$){ rewrite ^/read/works/?$ /read/works/page-11-/? permanent; }
+if ($args ~* ^page=12&$){ rewrite ^/read/works/?$ /read/works/page-12-/? permanent; }
+rewrite ^/@EAT$ /-EAT/? permanent;
+rewrite ^/@eliesalem$ /-eliesalem/? permanent;
+rewrite ^/@mak21$ /-mak21/? permanent;
+rewrite ^/@AJ$ /-AJ/? permanent;
+if ($args ~* ^page=&$){ rewrite ^/read/magazines/?$ /read/magazines/page--/? permanent; }
+if ($args ~* ^page=1&$){ rewrite ^/read/magazines/?$ /read/magazines/page-1-/? permanent; }
+rewrite ^/@KMM$ /-KMM/? permanent;
+if ($args ~* ^page=2&page=$){ rewrite ^/search/?$ /search/page-2-page/? permanent; }
+if ($args ~* ^page=3&page=$){ rewrite ^/search/?$ /search/page-3-page/? permanent; }
+if ($args ~* ^page=4&page=$){ rewrite ^/search/?$ /search/page-4-page/? permanent; }
+if ($args ~* ^page=5&page=$){ rewrite ^/search/?$ /search/page-5-page/? permanent; }
+if ($args ~* ^page=20&page=$){ rewrite ^/search/?$ /search/page-20-page/? permanent; }
+rewrite ^/@MAS$ /-MAS/? permanent;
+rewrite ^/@m21$ /-m21/? permanent;
+rewrite ^/@LAS$ /-LAS/? permanent;
+if ($args ~* ^page=10&$){ rewrite ^/search/?$ /search/page-10-/? permanent; }
+rewrite ^/@kba76$ /-kba76/? permanent;
+rewrite ^/@JHU54$ /-JHU54/? permanent;
+if ($args ~* ^page=11&$){ rewrite ^/search/?$ /search/page-11-/? permanent; }
+rewrite ^/@JBO$ /-JBO/? permanent;
+rewrite ^/@JBL93$ /-JBL93/? permanent;
+rewrite ^/@JAP$ /-JAP/? permanent;
+rewrite ^/@ishaanprasad$ /-ishaanprasad/? permanent;
+rewrite ^/@hgh19$ /-hgh19/? permanent;
+if ($args ~* ^page=12&$){ rewrite ^/search/?$ /search/page-12-/? permanent; }
+if ($args ~* ^page=13&$){ rewrite ^/search/?$ /search/page-13-/? permanent; }
+if ($args ~* ^page=14&$){ rewrite ^/search/?$ /search/page-14-/? permanent; }
+if ($args ~* ^page=15&$){ rewrite ^/search/?$ /search/page-15-/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^//?$ /epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/youngandmisunderstood/good-guy/?$ /youngandmisunderstood/good-guy_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/flesh-and-blood/new-partner/?$ /flesh-and-blood/new-partner_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/youngandmisunderstood/history-class/?$ /youngandmisunderstood/history-class_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/flesh-and-blood/chimney-sweep/?$ /flesh-and-blood/chimney-sweep_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/dead-of-night/the-royal-we/?$ /dead-of-night/the-royal-we_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/youngandmisunderstood/vanitas-3/?$ /youngandmisunderstood/vanitas-3_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/youngandmisunderstood/fly-on-the-wall/?$ /youngandmisunderstood/fly-on-the-wall_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/youngandmisunderstood/worried/?$ /youngandmisunderstood/worried_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/seasons-of-life/no-more-sheriffs/?$ /seasons-of-life/no-more-sheriffs_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/seasons-of-life/bus-driver/?$ /seasons-of-life/bus-driver_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/seasons-of-life/exam-locations/?$ /seasons-of-life/exam-locations_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/youngandmisunderstood/relationship/?$ /youngandmisunderstood/relationship_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/last-ditch-effort/business-presentation/?$ /last-ditch-effort/business-presentation_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/last-ditch-effort/middle-school-beauty/?$ /last-ditch-effort/middle-school-beauty_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/seasons-of-life/discovery-kids-pilot-episode/?$ /seasons-of-life/discovery-kids-pilot-episode_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/all-natural/mr-gardener-and-the-big-conference/?$ /all-natural/mr-gardener-and-the-big-conference_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/last-ditch-effort/driving-to-a-burger-joint/?$ /last-ditch-effort/driving-to-a-burger-joint_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/last-ditch-effort/fight-song/?$ /last-ditch-effort/fight-song_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/last-ditch-effort/hit-that-button/?$ /last-ditch-effort/hit-that-button_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/last-ditch-effort/relax/?$ /last-ditch-effort/relax_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/last-ditch-effort/the-big-man-on-campus/?$ /last-ditch-effort/the-big-man-on-campus_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/last-ditch-effort/two-bailiffs-talk-before-court-starts/?$ /last-ditch-effort/two-bailiffs-talk-before-court-starts_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/larry-vs-the-infernal-machine/?$ /issue/larry-vs-the-infernal-machine_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/equation-for-entropy/?$ /issue/equation-for-entropy_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/family-friendly-comedy/?$ /issue/family-friendly-comedy_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/symphonia-fantastica/?$ /issue/symphonia-fantastica_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/smellfungus/?$ /issue/smellfungus_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/hey-you-yeah-you-quit-pulling-my-leg/?$ /issue/hey-you-yeah-you-quit-pulling-my-leg_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/last-ditch-effort/?$ /issue/last-ditch-effort_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/seasons-of-life/?$ /issue/seasons-of-life_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/young-and-misunderstood/?$ /issue/young-and-misunderstood_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/sets-in-the-west/?$ /issue/sets-in-the-west_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/once-in-a-blue-moon/?$ /issue/once-in-a-blue-moon_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/my-creation-myth/?$ /issue/my-creation-myth_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/break-of-day/?$ /issue/break-of-day_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/grass-is-greener/?$ /issue/grass-is-greener_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/dead-of-night/?$ /issue/dead-of-night_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/flesh-and-blood/?$ /issue/flesh-and-blood_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/jsr22/?$ /author/jsr22_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/lrk21/?$ /author/lrk21_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/vin21/?$ /author/vin21_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/vanitas-5/?$ /me-and-my-lovers/vanitas-5_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/crocodile-comix/?$ /me-and-my-lovers/crocodile-comix_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/retirement-compound-salesman/?$ /me-and-my-lovers/retirement-compound-salesman_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/love-song/?$ /me-and-my-lovers/love-song_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/the-talk/?$ /me-and-my-lovers/the-talk_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/decision-comix/?$ /me-and-my-lovers/decision-comix_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/me-and-my-babies/?$ /me-and-my-lovers/me-and-my-babies_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/hell/?$ /me-and-my-lovers/hell_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/the-talk-throughout-history/?$ /me-and-my-lovers/the-talk-throughout-history_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/date-ideas/?$ /me-and-my-lovers/date-ideas_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/my-first-crush/?$ /me-and-my-lovers/my-first-crush_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/polygamy/?$ /me-and-my-lovers/polygamy_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/jlg21/?$ /author/jlg21_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/jsr/?$ /author/jsr_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/vanitas-2/?$ /for-your-consideration/vanitas-2_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/hamilton/?$ /for-your-consideration/hamilton_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/2020-international-video-game-awards-acceptance-speech/?$ /for-your-consideration/2020-international-video-game-awards-acceptance-speech_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/mall-santa/?$ /for-your-consideration/mall-santa_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/street-fight/?$ /for-your-consideration/street-fight_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/bad-days/?$ /for-your-consideration/bad-days_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/tv-salesman/?$ /for-your-consideration/tv-salesman_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/operation-enduring-freedom/?$ /for-your-consideration/operation-enduring-freedom_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/crying-in-the-rain/?$ /for-your-consideration/crying-in-the-rain_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/theres-no-more-gazpacho-in-the-cupboard/?$ /for-your-consideration/theres-no-more-gazpacho-in-the-cupboard_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/shark-tank-u-s-s-r/?$ /for-your-consideration/shark-tank-u-s-s-r_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/j-robert-oppenheimer-signs-an-nda/?$ /for-your-consideration/j-robert-oppenheimer-signs-an-nda_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/my-piece-about-what-it-would-be-like-if-i-wrote-a-piece-for-the-fyc/?$ /for-your-consideration/my-piece-about-what-it-would-be-like-if-i-wrote-a-piece-for-the-fyc_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/best-picture/?$ /for-your-consideration/best-picture_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/how-long-have-you-been-unemployed/?$ /for-your-consideration/how-long-have-you-been-unemployed_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/answering-machine/?$ /for-your-consideration/answering-machine_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/a-retelling-of-jaws-by-someone-who-has-definitely-seen-it/?$ /for-your-consideration/a-retelling-of-jaws-by-someone-who-has-definitely-seen-it_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/a-taste-of-my-own-medicine/?$ /for-your-consideration/a-taste-of-my-own-medicine_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/femme-fatale/?$ /for-your-consideration/femme-fatale_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/for-your-consideration/blockbuster/?$ /for-your-consideration/blockbuster_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/elvis-has-left-the-building/?$ /classic-pieces/elvis-has-left-the-building_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/de-la-comtesse/?$ /classic-pieces/de-la-comtesse_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/sky-diving/?$ /classic-pieces/sky-diving_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/bad-doctors/?$ /classic-pieces/bad-doctors_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/changes/?$ /classic-pieces/changes_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/advice-from-a-car-thief/?$ /classic-pieces/advice-from-a-car-thief_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/gag-gifts/?$ /classic-pieces/gag-gifts_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/my-unhappy-rendezvous-with-magical-realism/?$ /classic-pieces/my-unhappy-rendezvous-with-magical-realism_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/vegas-weatherman/?$ /classic-pieces/vegas-weatherman_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/mortons-mail-order/?$ /classic-pieces/mortons-mail-order_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/life-o-the-party/?$ /classic-pieces/life-o-the-party_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/products-for-the-tough/?$ /classic-pieces/products-for-the-tough_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/tv-harmful-or-just-deadly/?$ /classic-pieces/tv-harmful-or-just-deadly_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/in-the-beef-box/?$ /classic-pieces/in-the-beef-box_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/notes-from-the-under-grateful/?$ /classic-pieces/notes-from-the-under-grateful_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/hold-up/?$ /classic-pieces/hold-up_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/tax-free-encounter/?$ /classic-pieces/tax-free-encounter_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/classic-pieces/the-saxophone-player/?$ /classic-pieces/the-saxophone-player_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^page=2&page=$){ rewrite ^/read/works/?$ /read/works/page-2-page/? permanent; }
+if ($args ~* ^page=3&page=$){ rewrite ^/read/works/?$ /read/works/page-3-page/? permanent; }
+if ($args ~* ^page=4&page=$){ rewrite ^/read/works/?$ /read/works/page-4-page/? permanent; }
+if ($args ~* ^page=5&page=$){ rewrite ^/read/works/?$ /read/works/page-5-page/? permanent; }
+if ($args ~* ^page=13&page=$){ rewrite ^/read/works/?$ /read/works/page-13-page/? permanent; }
+if ($args ~* ^page=2&page=2&page=$){ rewrite ^/search/?$ /search/page-2-page-2-page/? permanent; }
+if ($args ~* ^page=4&page=2&page=$){ rewrite ^/search/?$ /search/page-4-page-2-page/? permanent; }
+if ($args ~* ^page=5&page=2&page=$){ rewrite ^/search/?$ /search/page-5-page-2-page/? permanent; }
+if ($args ~* ^page=20&page=2&page=$){ rewrite ^/search/?$ /search/page-20-page-2-page/? permanent; }
+if ($args ~* ^page=3&page=3&page=$){ rewrite ^/search/?$ /search/page-3-page-3-page/? permanent; }
+if ($args ~* ^page=4&page=3&page=$){ rewrite ^/search/?$ /search/page-4-page-3-page/? permanent; }
+if ($args ~* ^page=5&page=3&page=$){ rewrite ^/search/?$ /search/page-5-page-3-page/? permanent; }
+if ($args ~* ^page=20&page=3&page=$){ rewrite ^/search/?$ /search/page-20-page-3-page/? permanent; }
+if ($args ~* ^page=2&page=4&page=$){ rewrite ^/search/?$ /search/page-2-page-4-page/? permanent; }
+if ($args ~* ^page=3&page=4&page=$){ rewrite ^/search/?$ /search/page-3-page-4-page/? permanent; }
+if ($args ~* ^page=4&page=4&page=$){ rewrite ^/search/?$ /search/page-4-page-4-page/? permanent; }
+if ($args ~* ^page=5&page=4&page=$){ rewrite ^/search/?$ /search/page-5-page-4-page/? permanent; }
+if ($args ~* ^page=20&page=4&page=$){ rewrite ^/search/?$ /search/page-20-page-4-page/? permanent; }
+if ($args ~* ^page=2&page=5&page=$){ rewrite ^/search/?$ /search/page-2-page-5-page/? permanent; }
+if ($args ~* ^page=3&page=5&page=$){ rewrite ^/search/?$ /search/page-3-page-5-page/? permanent; }
+if ($args ~* ^page=4&page=5&page=$){ rewrite ^/search/?$ /search/page-4-page-5-page/? permanent; }
+if ($args ~* ^page=5&page=5&page=$){ rewrite ^/search/?$ /search/page-5-page-5-page/? permanent; }
+if ($args ~* ^page=20&page=5&page=$){ rewrite ^/search/?$ /search/page-20-page-5-page/? permanent; }
+if ($args ~* ^page=2&page=20&page=$){ rewrite ^/search/?$ /search/page-2-page-20-page/? permanent; }
+if ($args ~* ^page=3&page=20&page=$){ rewrite ^/search/?$ /search/page-3-page-20-page/? permanent; }
+if ($args ~* ^page=4&page=20&page=$){ rewrite ^/search/?$ /search/page-4-page-20-page/? permanent; }
+if ($args ~* ^page=5&page=20&page=$){ rewrite ^/search/?$ /search/page-5-page-20-page/? permanent; }
+if ($args ~* ^page=20&page=20&page=$){ rewrite ^/search/?$ /search/page-20-page-20-page/? permanent; }
+rewrite ^/@ESW06$ /-ESW06/? permanent;
+rewrite ^/@ERB$ /-ERB/? permanent;
+rewrite ^/@EFM$ /-EFM/? permanent;
+rewrite ^/@EAH$ /-EAH/? permanent;
+rewrite ^/@DNA$ /-DNA/? permanent;
+rewrite ^/@DJH$ /-DJH/? permanent;
+rewrite ^/@DHM92$ /-DHM92/? permanent;
+rewrite ^/@CWW$ /-CWW/? permanent;
+rewrite ^/@CRS$ /-CRS/? permanent;
+rewrite ^/@ckj04$ /-ckj04/? permanent;
+rewrite ^/@CGB$ /-CGB/? permanent;
+rewrite ^/@CCSW$ /-CCSW/? permanent;
+rewrite ^/@bjn01$ /-bjn01/? permanent;
+rewrite ^/@asl22$ /-asl22/? permanent;
+rewrite ^/@AMP$ /-AMP/? permanent;
+rewrite ^/@ACW$ /-ACW/? permanent;
+rewrite ^/@AAD$ /-AAD/? permanent;
+rewrite ^/@samsuchin$ /-samsuchin/? permanent;
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/drm/?$ /author/drm_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/jfar19/?$ /author/jfar19_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/hfj/?$ /author/hfj_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/flesh-and-blood/a-man-with-a-limp-and-three-glass-eyes/?$ /flesh-and-blood/a-man-with-a-limp-and-three-glass-eyes_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/flesh-and-blood/costume-party/?$ /flesh-and-blood/costume-party_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/flesh-and-blood/eugenics/?$ /flesh-and-blood/eugenics_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/flesh-and-blood/last-day-at-the-zoo/?$ /flesh-and-blood/last-day-at-the-zoo_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/ccsw/?$ /author/ccsw_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/taf/?$ /author/taf_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/mjs/?$ /author/mjs_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/cdl21/?$ /author/cdl21_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/jgs20/?$ /author/jgs20_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/cas/?$ /author/cas_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/bwm19-20/?$ /author/bwm19-20_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/larry-vs-the-infernal-machine/gorilla-larry-2/?$ /larry-vs-the-infernal-machine/gorilla-larry-2_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/equation-for-entropy/krauts/?$ /equation-for-entropy/krauts_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/equation-for-entropy/my-first-real-piece-ever/?$ /equation-for-entropy/my-first-real-piece-ever_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/smellfungus/ashes-2/?$ /smellfungus/ashes-2_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/smellfungus/2019-world-expo/?$ /smellfungus/2019-world-expo_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/smellfungus/fire-department-tour/?$ /smellfungus/fire-department-tour_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/smellfungus/fortune-teller-comix/?$ /smellfungus/fortune-teller-comix_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/smellfungus/half-day/?$ /smellfungus/half-day_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/smellfungus/marco-polo/?$ /smellfungus/marco-polo_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/smellfungus/movie-theatre/?$ /smellfungus/movie-theatre_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/smellfungus/outside-microsoft-hq/?$ /smellfungus/outside-microsoft-hq_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/smellfungus/st-louis-childrens-theatre-production-company/?$ /smellfungus/st-louis-childrens-theatre-production-company_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/smellfungus/the-beat-generation/?$ /smellfungus/the-beat-generation_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/smellfungus/wait-wait-dont-tell-me/?$ /smellfungus/wait-wait-dont-tell-me_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/hey-you-yeah-you-quit-pulling-my-leg/fat-camp/?$ /hey-you-yeah-you-quit-pulling-my-leg/fat-camp_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop/?$ /hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop-ii/?$ /hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop-ii_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/last-ditch-effort/new-york/?$ /last-ditch-effort/new-york_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/sets-in-the-west/eulogy-of-george/?$ /sets-in-the-west/eulogy-of-george_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/sets-in-the-west/goin-west/?$ /sets-in-the-west/goin-west_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/sets-in-the-west/judge-jury-and-executioner/?$ /sets-in-the-west/judge-jury-and-executioner_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/sets-in-the-west/president-nice-guy/?$ /sets-in-the-west/president-nice-guy_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/sets-in-the-west/the-dust-bowl/?$ /sets-in-the-west/the-dust-bowl_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/sets-in-the-west/the-life-of-a-cowboy/?$ /sets-in-the-west/the-life-of-a-cowboy_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/grass-is-greener/online-quiz/?$ /grass-is-greener/online-quiz_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/once-in-a-blue-moon/good-cop-bad-cop-jelly-donut-cop/?$ /once-in-a-blue-moon/good-cop-bad-cop-jelly-donut-cop_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/once-in-a-blue-moon/inspired-musings/?$ /once-in-a-blue-moon/inspired-musings_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/once-in-a-blue-moon/my-fairy/?$ /once-in-a-blue-moon/my-fairy_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/once-in-a-blue-moon/my-feminism/?$ /once-in-a-blue-moon/my-feminism_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/once-in-a-blue-moon/my-trip-to-cleveland/?$ /once-in-a-blue-moon/my-trip-to-cleveland_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/once-in-a-blue-moon/rare/?$ /once-in-a-blue-moon/rare_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/once-in-a-blue-moon/vanitas-4/?$ /once-in-a-blue-moon/vanitas-4_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68-2/?$ /my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68-2_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/my-creation-myth/genesis/?$ /my-creation-myth/genesis_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68/?$ /my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/my-creation-myth/wwe/?$ /my-creation-myth/wwe_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/break-of-day/crowdsourcing-request/?$ /break-of-day/crowdsourcing-request_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/break-of-day/morning-routine/?$ /break-of-day/morning-routine_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/break-of-day/new-cat/?$ /break-of-day/new-cat_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/break-of-day/sunglasses/?$ /break-of-day/sunglasses_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/break-of-day/the-count-of-monte-cristo-returns-to-marseilles/?$ /break-of-day/the-count-of-monte-cristo-returns-to-marseilles_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/break-of-day/what-i-imagine-summer-camp-is-like/?$ /break-of-day/what-i-imagine-summer-camp-is-like_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/grass-is-greener/why-i-wish-i-was-a-green-boy-instead-of-a-blue-boy/?$ /grass-is-greener/why-i-wish-i-was-a-green-boy-instead-of-a-blue-boy_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/grass-is-greener/kermit/?$ /grass-is-greener/kermit_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/grass-is-greener/lawnmower/?$ /grass-is-greener/lawnmower_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/grass-is-greener/interview/?$ /grass-is-greener/interview_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/dead-of-night/midnight-train/?$ /dead-of-night/midnight-train_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/dead-of-night/store-closing/?$ /dead-of-night/store-closing_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/dead-of-night/vanagon/?$ /dead-of-night/vanagon_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/flesh-and-blood/my-birth/?$ /flesh-and-blood/my-birth_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/mak21/?$ /author/mak21_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/jrd22/?$ /author/jrd22_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/jec21/?$ /author/jec21_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/mfp23/?$ /author/mfp23_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/mav23/?$ /author/mav23_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/me-and-my-lovers/thank-you-note/?$ /me-and-my-lovers/thank-you-note_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/jpw22/?$ /author/jpw22_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/pks21/?$ /author/pks21_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/gpl21/?$ /author/gpl21_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/fss21/?$ /author/fss21_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/ymc21/?$ /author/ymc21_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/nantucket-sleighride/?$ /issue/nantucket-sleighride_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/issue/\*classic-pieces/?$ /issue/-classic-pieces_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/bjn01/?$ /author/bjn01_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/wsi74/?$ /author/wsi74_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/jhu54/?$ /author/jhu54_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^epcl-action=remove-notice$){ rewrite ^/author/gap48/?$ /author/gap48_epcl-action-remove-notice/? permanent; }
+if ($args ~* ^page=2&page=2&page=$){ rewrite ^/read/works/?$ /read/works/page-2-page-2-page/? permanent; }
+if ($args ~* ^page=3&page=2&page=$){ rewrite ^/read/works/?$ /read/works/page-3-page-2-page/? permanent; }
+if ($args ~* ^page=4&page=2&page=$){ rewrite ^/read/works/?$ /read/works/page-4-page-2-page/? permanent; }
+if ($args ~* ^page=5&page=2&page=$){ rewrite ^/read/works/?$ /read/works/page-5-page-2-page/? permanent; }
+if ($args ~* ^page=13&page=2&page=$){ rewrite ^/read/works/?$ /read/works/page-13-page-2-page/? permanent; }
+if ($args ~* ^page=2&page=3&page=$){ rewrite ^/read/works/?$ /read/works/page-2-page-3-page/? permanent; }
+if ($args ~* ^page=3&page=3&page=$){ rewrite ^/read/works/?$ /read/works/page-3-page-3-page/? permanent; }
+if ($args ~* ^page=4&page=3&page=$){ rewrite ^/read/works/?$ /read/works/page-4-page-3-page/? permanent; }
+if ($args ~* ^page=5&page=3&page=$){ rewrite ^/read/works/?$ /read/works/page-5-page-3-page/? permanent; }
+if ($args ~* ^page=13&page=3&page=$){ rewrite ^/read/works/?$ /read/works/page-13-page-3-page/? permanent; }
+if ($args ~* ^page=2&page=4&page=$){ rewrite ^/read/works/?$ /read/works/page-2-page-4-page/? permanent; }
+if ($args ~* ^page=3&page=4&page=$){ rewrite ^/read/works/?$ /read/works/page-3-page-4-page/? permanent; }
+if ($args ~* ^page=4&page=4&page=$){ rewrite ^/read/works/?$ /read/works/page-4-page-4-page/? permanent; }
+if ($args ~* ^page=5&page=4&page=$){ rewrite ^/read/works/?$ /read/works/page-5-page-4-page/? permanent; }
+if ($args ~* ^page=13&page=4&page=$){ rewrite ^/read/works/?$ /read/works/page-13-page-4-page/? permanent; }
+if ($args ~* ^page=2&page=5&page=$){ rewrite ^/read/works/?$ /read/works/page-2-page-5-page/? permanent; }
+if ($args ~* ^page=3&page=5&page=$){ rewrite ^/read/works/?$ /read/works/page-3-page-5-page/? permanent; }
+if ($args ~* ^page=4&page=5&page=$){ rewrite ^/read/works/?$ /read/works/page-4-page-5-page/? permanent; }
+if ($args ~* ^page=5&page=5&page=$){ rewrite ^/read/works/?$ /read/works/page-5-page-5-page/? permanent; }
+if ($args ~* ^page=13&page=5&page=$){ rewrite ^/read/works/?$ /read/works/page-13-page-5-page/? permanent; }
+if ($args ~* ^page=2&page=13&page=$){ rewrite ^/read/works/?$ /read/works/page-2-page-13-page/? permanent; }
+if ($args ~* ^page=4&page=13&page=$){ rewrite ^/read/works/?$ /read/works/page-4-page-13-page/? permanent; }
+if ($args ~* ^page=5&page=13&page=$){ rewrite ^/read/works/?$ /read/works/page-5-page-13-page/? permanent; }
+if ($args ~* ^page=13&page=13&page=$){ rewrite ^/read/works/?$ /read/works/page-13-page-13-page/? permanent; }
+if ($args ~* ^page=2&page=2&page=2&page=$){ rewrite ^/search/?$ /search/page-2-page-2-page-2-page/? permanent; }
+if ($args ~* ^page=3&page=2&page=2&page=$){ rewrite ^/search/?$ /search/page-3-page-2-page-2-page/? permanent; }
+if ($args ~* ^page=4&page=2&page=2&page=$){ rewrite ^/search/?$ /search/page-4-page-2-page-2-page/? permanent; }
+if ($args ~* ^page=5&page=2&page=2&page=$){ rewrite ^/search/?$ /search/page-5-page-2-page-2-page/? permanent; }
+if ($args ~* ^page=20&page=2&page=2&page=$){ rewrite ^/search/?$ /search/page-20-page-2-page-2-page/? permanent; }
+if ($args ~* ^page=2&page=4&page=2&page=$){ rewrite ^/search/?$ /search/page-2-page-4-page-2-page/? permanent; }
+if ($args ~* ^page=3&page=4&page=2&page=$){ rewrite ^/search/?$ /search/page-3-page-4-page-2-page/? permanent; }
+if ($args ~* ^page=4&page=4&page=2&page=$){ rewrite ^/search/?$ /search/page-4-page-4-page-2-page/? permanent; }
+if ($args ~* ^page=5&page=4&page=2&page=$){ rewrite ^/search/?$ /search/page-5-page-4-page-2-page/? permanent; }
+if ($args ~* ^page=20&page=4&page=2&page=$){ rewrite ^/search/?$ /search/page-20-page-4-page-2-page/? permanent; }
+if ($args ~* ^page=2&page=5&page=2&page=$){ rewrite ^/search/?$ /search/page-2-page-5-page-2-page/? permanent; }
+if ($args ~* ^page=4&page=5&page=2&page=$){ rewrite ^/search/?$ /search/page-4-page-5-page-2-page/? permanent; }
+if ($args ~* ^page=5&page=5&page=2&page=$){ rewrite ^/search/?$ /search/page-5-page-5-page-2-page/? permanent; }
+if ($args ~* ^page=20&page=5&page=2&page=$){ rewrite ^/search/?$ /search/page-20-page-5-page-2-page/? permanent; }
+if ($args ~* ^page=2&page=20&page=2&page=$){ rewrite ^/search/?$ /search/page-2-page-20-page-2-page/? permanent; }
+if ($args ~* ^page=3&page=20&page=2&page=$){ rewrite ^/search/?$ /search/page-3-page-20-page-2-page/? permanent; }
+if ($args ~* ^page=4&page=20&page=2&page=$){ rewrite ^/search/?$ /search/page-4-page-20-page-2-page/? permanent; }
+if ($args ~* ^page=5&page=20&page=2&page=$){ rewrite ^/search/?$ /search/page-5-page-20-page-2-page/? permanent; }
+if ($args ~* ^page=20&page=20&page=2&page=$){ rewrite ^/search/?$ /search/page-20-page-20-page-2-page/? permanent; }
+if ($args ~* ^page=2&page=3&page=3&page=$){ rewrite ^/search/?$ /search/page-2-page-3-page-3-page/? permanent; }
+if ($args ~* ^page=5&page=3&page=3&page=$){ rewrite ^/search/?$ /search/page-5-page-3-page-3-page/? permanent; }
+if ($args ~* ^page=2&page=4&page=3&page=$){ rewrite ^/search/?$ /search/page-2-page-4-page-3-page/? permanent; }
+if ($args ~* ^page=3&page=4&page=3&page=$){ rewrite ^/search/?$ /search/page-3-page-4-page-3-page/? permanent; }
+if ($args ~* ^page=4&page=4&page=3&page=$){ rewrite ^/search/?$ /search/page-4-page-4-page-3-page/? permanent; }
+if ($args ~* ^page=5&page=4&page=3&page=$){ rewrite ^/search/?$ /search/page-5-page-4-page-3-page/? permanent; }
+if ($args ~* ^page=20&page=4&page=3&page=$){ rewrite ^/search/?$ /search/page-20-page-4-page-3-page/? permanent; }
+if ($args ~* ^page=2&page=5&page=3&page=$){ rewrite ^/search/?$ /search/page-2-page-5-page-3-page/? permanent; }
+if ($args ~* ^page=3&page=5&page=3&page=$){ rewrite ^/search/?$ /search/page-3-page-5-page-3-page/? permanent; }
+if ($args ~* ^page=4&page=5&page=3&page=$){ rewrite ^/search/?$ /search/page-4-page-5-page-3-page/? permanent; }
+if ($args ~* ^page=5&page=5&page=3&page=$){ rewrite ^/search/?$ /search/page-5-page-5-page-3-page/? permanent; }
+if ($args ~* ^page=20&page=5&page=3&page=$){ rewrite ^/search/?$ /search/page-20-page-5-page-3-page/? permanent; }
+if ($args ~* ^page=2&page=20&page=3&page=$){ rewrite ^/search/?$ /search/page-2-page-20-page-3-page/? permanent; }
+if ($args ~* ^page=3&page=20&page=3&page=$){ rewrite ^/search/?$ /search/page-3-page-20-page-3-page/? permanent; }
+if ($args ~* ^page=4&page=20&page=3&page=$){ rewrite ^/search/?$ /search/page-4-page-20-page-3-page/? permanent; }
+if ($args ~* ^page=5&page=20&page=3&page=$){ rewrite ^/search/?$ /search/page-5-page-20-page-3-page/? permanent; }
+if ($args ~* ^page=20&page=20&page=3&page=$){ rewrite ^/search/?$ /search/page-20-page-20-page-3-page/? permanent; }
+if ($args ~* ^page=2&page=4&page=4&page=$){ rewrite ^/search/?$ /search/page-2-page-4-page-4-page/? permanent; }
+if ($args ~* ^page=3&page=4&page=4&page=$){ rewrite ^/search/?$ /search/page-3-page-4-page-4-page/? permanent; }
+if ($args ~* ^page=4&page=4&page=4&page=$){ rewrite ^/search/?$ /search/page-4-page-4-page-4-page/? permanent; }
+if ($args ~* ^page=5&page=4&page=4&page=$){ rewrite ^/search/?$ /search/page-5-page-4-page-4-page/? permanent; }
+if ($args ~* ^page=20&page=4&page=4&page=$){ rewrite ^/search/?$ /search/page-20-page-4-page-4-page/? permanent; }
+if ($args ~* ^page=2&page=5&page=4&page=$){ rewrite ^/search/?$ /search/page-2-page-5-page-4-page/? permanent; }
+if ($args ~* ^page=3&page=5&page=4&page=$){ rewrite ^/search/?$ /search/page-3-page-5-page-4-page/? permanent; }
+if ($args ~* ^page=4&page=5&page=4&page=$){ rewrite ^/search/?$ /search/page-4-page-5-page-4-page/? permanent; }
+if ($args ~* ^page=5&page=5&page=4&page=$){ rewrite ^/search/?$ /search/page-5-page-5-page-4-page/? permanent; }
+if ($args ~* ^page=2&page=20&page=4&page=$){ rewrite ^/search/?$ /search/page-2-page-20-page-4-page/? permanent; }
+if ($args ~* ^page=3&page=20&page=4&page=$){ rewrite ^/search/?$ /search/page-3-page-20-page-4-page/? permanent; }
+if ($args ~* ^page=4&page=20&page=4&page=$){ rewrite ^/search/?$ /search/page-4-page-20-page-4-page/? permanent; }
+if ($args ~* ^page=5&page=20&page=4&page=$){ rewrite ^/search/?$ /search/page-5-page-20-page-4-page/? permanent; }
+if ($args ~* ^page=20&page=20&page=4&page=$){ rewrite ^/search/?$ /search/page-20-page-20-page-4-page/? permanent; }
+if ($args ~* ^page=2&page=5&page=5&page=$){ rewrite ^/search/?$ /search/page-2-page-5-page-5-page/? permanent; }
+if ($args ~* ^page=3&page=5&page=5&page=$){ rewrite ^/search/?$ /search/page-3-page-5-page-5-page/? permanent; }
+if ($args ~* ^page=4&page=5&page=5&page=$){ rewrite ^/search/?$ /search/page-4-page-5-page-5-page/? permanent; }
+if ($args ~* ^page=5&page=5&page=5&page=$){ rewrite ^/search/?$ /search/page-5-page-5-page-5-page/? permanent; }
+if ($args ~* ^page=20&page=5&page=5&page=$){ rewrite ^/search/?$ /search/page-20-page-5-page-5-page/? permanent; }
+if ($args ~* ^page=2&page=20&page=5&page=$){ rewrite ^/search/?$ /search/page-2-page-20-page-5-page/? permanent; }
+if ($args ~* ^page=3&page=20&page=5&page=$){ rewrite ^/search/?$ /search/page-3-page-20-page-5-page/? permanent; }
+if ($args ~* ^page=4&page=20&page=5&page=$){ rewrite ^/search/?$ /search/page-4-page-20-page-5-page/? permanent; }
+if ($args ~* ^page=5&page=20&page=5&page=$){ rewrite ^/search/?$ /search/page-5-page-20-page-5-page/? permanent; }
+if ($args ~* ^page=20&page=20&page=5&page=$){ rewrite ^/search/?$ /search/page-20-page-20-page-5-page/? permanent; }
+if ($args ~* ^page=2&page=20&page=20&page=$){ rewrite ^/search/?$ /search/page-2-page-20-page-20-page/? permanent; }
+if ($args ~* ^page=3&page=20&page=20&page=$){ rewrite ^/search/?$ /search/page-3-page-20-page-20-page/? permanent; }
+if ($args ~* ^page=4&page=20&page=20&page=$){ rewrite ^/search/?$ /search/page-4-page-20-page-20-page/? permanent; }
+if ($args ~* ^page=5&page=20&page=20&page=$){ rewrite ^/search/?$ /search/page-5-page-20-page-20-page/? permanent; }
+if ($args ~* ^page=20&page=20&page=20&page=$){ rewrite ^/search/?$ /search/page-20-page-20-page-20-page/? permanent; }

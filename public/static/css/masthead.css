@@ -1,0 +1,27 @@
+div#mcol {
+	text-align:center;
+	padding-bottom:40px;
+	font: 1.2em/1.5em "Adobe Caslon Pro", Palatino, Georgia, "Times New Roman", serif;
+}
+
+div#mcol h1 {
+	margin-bottom:30px;
+}
+
+div#mcol h3 {
+	margin:25px 0px 10px 0px;
+	text-transform: uppercase;
+	font: 1.3em "Adobe Caslon Pro", Palatino, Georgia, "Times New Roman", serif;
+	color: #555;
+}
+
+div#mcol h4 {
+	text-align:center;
+}
+
+div#mcol img {
+	display:block;
+	text-align:center;
+	width:50%;
+	margin:20px auto;
+}

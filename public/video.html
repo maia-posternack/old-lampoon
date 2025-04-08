@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>The Harvard Lampoon Online</title>
+	<link rel="canonical" href="http://harvardlampoon.com/video/" />
+	<link rel="shortcut icon" >
+	<link rel="stylesheet" href="../static/css/reset.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="../static/css/videos.css" type="text/css" media="screen">
+	<script src="../ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var w = $("#activevideo > iframe").width();
+			var h = w * 0.75;
+			$("#activevideo > iframe").height(h);
+			var colh = $("#lcol").height();
+			$("#rcol").height(colh);
+		});
+	</script>
+</head>
+<body>
+	<div id="top">
+	<div class="wrapper">
+		<a href="/"><img src="../static/images/logo.png" id="logo"></a>
+	</div>
+</div>
+<div id="navbar">
+	<div class="wrapper">
+		<ul id="navigation">
+			<li><a href="../comedy/">Comedy</a></li>
+			<li><a href="../comix/">Comix</a></li>
+			<li><a href="../issues/">Issues</a></li>
+			<li><a href="../video/">Videos</a></li>
+			<li><a href="../subscribe/">Subscribe</a></li>
+		</ul>
+		<form method="GET" action="../search/" id="searchbar">
+			<input type="text" name="q">
+			<input type="submit" class="submit">
+		</form>
+	</div>
+</div>
+	<div class="wrapper">
+		<div id="content">
+			<div id="lcol">
+				<h2>James Franco: Gucci Outtakes</h2>
+				<span id="byline"><h3>by 
+						<a href="../author/PVM/">PVM ’09–’11</a>
+				</h3></span>
+				<div id="activevideo">
+					<iframe src="../embed/6e3825a523_ext_iframe/" frameborder="0"></iframe>
+				</div>
+			</div>
+			<div id="rcol">
+				<div class="videoblurb">
+					<a href="../video/1/"><img src="../vi/dINMVPRA3DY/0.jpg" class="thumb"><a>
+					<div class="blurbtitle"><a href="../video/1/">John Wayne Visits the Castle</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="bottom">
+	<div class="wrapper">
+		<ul id="footer">
+			<li><a href="../about/">About</a></li>
+			<li><a href="../masthead/">Masthead</a></li>
+			<li><a href="../advertise/">Advertise</a></li>
+			<li><a href="../subscribe/">Subscribe</a></li>
+	</div>
+</div>
+</body>
+</html>

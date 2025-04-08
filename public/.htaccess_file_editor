@@ -1,0 +1,838 @@
+# invoke rewrite engine
+RewriteEngine On
+RewriteBase /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/
+
+Options -Indexes
+<IfModule mod_negotiation.c>
+	Options -MultiViews
+</IfModule>
+
+# Add a trailing slash (/) to a URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.[A-Za-z0-9]*$
+RewriteRule .*[^/]$ %{REQUEST_URI}/ [L,R=301]
+
+# Create pretty URLs
+RewriteRule ^([^/]+)/$ $1.html [S=9]
+RewriteRule ^([^/]+)/([^/]+)/$ $1/$2.html [S=8]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3.html [S=7]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4.html [S=6]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5.html [S=5]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5/$6.html [S=4]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5/$6/$7.html [S=3]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5/$6/$7/$8.html [S=2]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5/$6/$7/$8/$9.html [S=1]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5/$6/$7/$8/$9/$10.html
+# End: Create pretty URLs
+
+# Specific redirections
+RewriteRule ^index\.html$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/ [L,R=301]
+RewriteRule ^@jln21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-jln21/ [L,R=301,QSD]
+RewriteRule ^@NGH$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-NGH/ [L,R=301,QSD]
+RewriteRule ^@JTK$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-JTK/ [L,R=301,QSD]
+RewriteRule ^@ymc21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ymc21/ [L,R=301,QSD]
+RewriteRule ^@mag21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-mag21/ [L,R=301,QSD]
+RewriteRule ^@mfp23$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-mfp23/ [L,R=301,QSD]
+RewriteRule ^@GPCP$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-GPCP/ [L,R=301,QSD]
+RewriteRule ^@jrd22$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-jrd22/ [L,R=301,QSD]
+RewriteRule ^@OMA$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-OMA/ [L,R=301,QSD]
+RewriteRule ^@ebc22$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ebc22/ [L,R=301,QSD]
+RewriteRule ^@FOD$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-FOD/ [L,R=301,QSD]
+RewriteRule ^@CLC$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-CLC/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-/ [L,R=301,QSD]
+RewriteRule ^@lrk21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-lrk21/ [L,R=301,QSD]
+RewriteRule ^@TAF$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-TAF/ [L,R=301,QSD]
+RewriteRule ^@bgs22$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-bgs22/ [L,R=301,QSD]
+RewriteRule ^@mmm20$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-mmm20/ [L,R=301,QSD]
+RewriteRule ^@NSG$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-NSG/ [L,R=301,QSD]
+RewriteRule ^@gpl21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-gpl21/ [L,R=301,QSD]
+RewriteRule ^@jec21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-jec21/ [L,R=301,QSD]
+RewriteRule ^@SWR$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-SWR/ [L,R=301,QSD]
+RewriteRule ^@cdl21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-cdl21/ [L,R=301,QSD]
+RewriteRule ^@KPB$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-KPB/ [L,R=301,QSD]
+RewriteRule ^@lgf21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-lgf21/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-2-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-3-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-4-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-5-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-13-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&$
+RewriteRule ^read/magazines/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/magazines/page-2-/ [L,R=301,QSD]
+RewriteRule ^@JSR$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-JSR/ [L,R=301,QSD]
+RewriteRule ^@ghost$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ghost/ [L,R=301,QSD]
+RewriteRule ^@AMC$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-AMC/ [L,R=301,QSD]
+RewriteRule ^@gogo$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-gogo/ [L,R=301,QSD]
+RewriteRule ^@test123$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-test123/ [L,R=301,QSD]
+RewriteRule ^@admin$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-admin/ [L,R=301,QSD]
+RewriteRule ^@ZPH$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ZPH/ [L,R=301,QSD]
+RewriteRule ^@ZDG20$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ZDG20/ [L,R=301,QSD]
+RewriteRule ^@yj21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-yj21/ [L,R=301,QSD]
+RewriteRule ^@wsi74$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-wsi74/ [L,R=301,QSD]
+RewriteRule ^@jgs20$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-jgs20/ [L,R=301,QSD]
+RewriteRule ^@wi11dey$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-wi11dey/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page--/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=1&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-1-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=6&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-6-/ [L,R=301,QSD]
+RewriteRule ^@HJH19$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-HJH19/ [L,R=301,QSD]
+RewriteRule ^@WBB$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-WBB/ [L,R=301,QSD]
+RewriteRule ^@vin21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-vin21/ [L,R=301,QSD]
+RewriteRule ^@VG$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-VG/ [L,R=301,QSD]
+RewriteRule ^@TBW$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-TBW/ [L,R=301,QSD]
+RewriteRule ^@sw21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-sw21/ [L,R=301,QSD]
+RewriteRule ^@svg18$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-svg18/ [L,R=301,QSD]
+RewriteRule ^@skl23$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-skl23/ [L,R=301,QSD]
+RewriteRule ^@HBF$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-HBF/ [L,R=301,QSD]
+RewriteRule ^@sey87$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-sey87/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=7&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-7-/ [L,R=301,QSD]
+RewriteRule ^@scs81$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-scs81/ [L,R=301,QSD]
+RewriteRule ^@RMC95$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-RMC95/ [L,R=301,QSD]
+RewriteRule ^@bwm19-21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-bwm19-21/ [L,R=301,QSD]
+RewriteRule ^@RIP$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-RIP/ [L,R=301,QSD]
+RewriteRule ^@DJL$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-DJL/ [L,R=301,QSD]
+RewriteRule ^@prs87$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-prs87/ [L,R=301,QSD]
+RewriteRule ^@PKS$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-PKS/ [L,R=301,QSD]
+RewriteRule ^@pam75$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-pam75/ [L,R=301,QSD]
+RewriteRule ^@Owen$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-Owen/ [L,R=301,QSD]
+RewriteRule ^@NHS$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-NHS/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=8&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-8-/ [L,R=301,QSD]
+RewriteRule ^@ngj21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ngj21/ [L,R=301,QSD]
+RewriteRule ^@naa21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-naa21/ [L,R=301,QSD]
+RewriteRule ^@MVS$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-MVS/ [L,R=301,QSD]
+RewriteRule ^@mmw84$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-mmw84/ [L,R=301,QSD]
+RewriteRule ^@fss21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-fss21/ [L,R=301,QSD]
+RewriteRule ^@anonymous$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-anonymous/ [L,R=301,QSD]
+RewriteRule ^@MJS$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-MJS/ [L,R=301,QSD]
+RewriteRule ^@MGM$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-MGM/ [L,R=301,QSD]
+RewriteRule ^@mav23$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-mav23/ [L,R=301,QSD]
+RewriteRule ^@HHD$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-HHD/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=16&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-16-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=17&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-17-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=18&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-18-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=19&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-19-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^read/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^magazines/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/magazines_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/me-and-my-lovers/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/me-and-my-lovers_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classics/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classics_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^books/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/books_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^lame-of-thrones-preview/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/lame-of-thrones-preview_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteRule ^@jlg21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-jlg21/ [L,R=301,QSD]
+RewriteRule ^@jpw22$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-jpw22/ [L,R=301,QSD]
+RewriteRule ^@DRM$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-DRM/ [L,R=301,QSD]
+RewriteRule ^@jtb20$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-jtb20/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page--/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=1&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-1-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=6&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-6-/ [L,R=301,QSD]
+RewriteRule ^@ASB$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ASB/ [L,R=301,QSD]
+RewriteRule ^@CAS$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-CAS/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=7&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-7-/ [L,R=301,QSD]
+RewriteRule ^@JFAR19-20$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-JFAR19-20/ [L,R=301,QSD]
+RewriteRule ^@mas18$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-mas18/ [L,R=301,QSD]
+RewriteRule ^@HFJ$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-HFJ/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=8&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-8-/ [L,R=301,QSD]
+RewriteRule ^@eno21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-eno21/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=9&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-9-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=10&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-10-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=11&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-11-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=12&$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-12-/ [L,R=301,QSD]
+RewriteRule ^@EAT$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-EAT/ [L,R=301,QSD]
+RewriteRule ^@eliesalem$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-eliesalem/ [L,R=301,QSD]
+RewriteRule ^@mak21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-mak21/ [L,R=301,QSD]
+RewriteRule ^@AJ$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-AJ/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=&$
+RewriteRule ^read/magazines/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/magazines/page--/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=1&$
+RewriteRule ^read/magazines/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/magazines/page-1-/ [L,R=301,QSD]
+RewriteRule ^@KMM$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-KMM/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page/ [L,R=301,QSD]
+RewriteRule ^@MAS$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-MAS/ [L,R=301,QSD]
+RewriteRule ^@m21$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-m21/ [L,R=301,QSD]
+RewriteRule ^@LAS$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-LAS/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=10&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-10-/ [L,R=301,QSD]
+RewriteRule ^@kba76$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-kba76/ [L,R=301,QSD]
+RewriteRule ^@JHU54$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-JHU54/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=11&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-11-/ [L,R=301,QSD]
+RewriteRule ^@JBO$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-JBO/ [L,R=301,QSD]
+RewriteRule ^@JBL93$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-JBL93/ [L,R=301,QSD]
+RewriteRule ^@JAP$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-JAP/ [L,R=301,QSD]
+RewriteRule ^@ishaanprasad$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ishaanprasad/ [L,R=301,QSD]
+RewriteRule ^@hgh19$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-hgh19/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=12&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-12-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-13-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=14&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-14-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=15&$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-15-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/good-guy/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/youngandmisunderstood/good-guy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/new-partner/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/flesh-and-blood/new-partner_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/history-class/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/youngandmisunderstood/history-class_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/chimney-sweep/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/flesh-and-blood/chimney-sweep_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^dead-of-night/the-royal-we/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/dead-of-night/the-royal-we_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/vanitas-3/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/youngandmisunderstood/vanitas-3_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/fly-on-the-wall/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/youngandmisunderstood/fly-on-the-wall_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/worried/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/youngandmisunderstood/worried_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^seasons-of-life/no-more-sheriffs/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/seasons-of-life/no-more-sheriffs_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^seasons-of-life/bus-driver/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/seasons-of-life/bus-driver_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^seasons-of-life/exam-locations/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/seasons-of-life/exam-locations_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/relationship/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/youngandmisunderstood/relationship_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/business-presentation/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/last-ditch-effort/business-presentation_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/middle-school-beauty/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/last-ditch-effort/middle-school-beauty_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^seasons-of-life/discovery-kids-pilot-episode/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/seasons-of-life/discovery-kids-pilot-episode_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^all-natural/mr-gardener-and-the-big-conference/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/all-natural/mr-gardener-and-the-big-conference_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/driving-to-a-burger-joint/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/last-ditch-effort/driving-to-a-burger-joint_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/fight-song/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/last-ditch-effort/fight-song_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/hit-that-button/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/last-ditch-effort/hit-that-button_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/relax/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/last-ditch-effort/relax_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/the-big-man-on-campus/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/last-ditch-effort/the-big-man-on-campus_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/two-bailiffs-talk-before-court-starts/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/last-ditch-effort/two-bailiffs-talk-before-court-starts_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/larry-vs-the-infernal-machine/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/larry-vs-the-infernal-machine_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/equation-for-entropy/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/equation-for-entropy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/family-friendly-comedy/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/family-friendly-comedy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/symphonia-fantastica/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/symphonia-fantastica_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/smellfungus/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/smellfungus_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/hey-you-yeah-you-quit-pulling-my-leg/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/hey-you-yeah-you-quit-pulling-my-leg_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/last-ditch-effort/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/last-ditch-effort_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/seasons-of-life/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/seasons-of-life_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/young-and-misunderstood/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/young-and-misunderstood_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/sets-in-the-west/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/sets-in-the-west_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/once-in-a-blue-moon/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/once-in-a-blue-moon_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/my-creation-myth/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/my-creation-myth_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/break-of-day/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/break-of-day_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/grass-is-greener/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/grass-is-greener_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/dead-of-night/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/dead-of-night_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/flesh-and-blood/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/flesh-and-blood_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jsr22/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/jsr22_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/lrk21/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/lrk21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/vin21/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/vin21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/vanitas-5/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/vanitas-5_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/crocodile-comix/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/crocodile-comix_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/retirement-compound-salesman/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/retirement-compound-salesman_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/love-song/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/love-song_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/the-talk/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/the-talk_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/decision-comix/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/decision-comix_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/me-and-my-babies/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/me-and-my-babies_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/hell/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/hell_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/the-talk-throughout-history/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/the-talk-throughout-history_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/date-ideas/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/date-ideas_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/my-first-crush/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/my-first-crush_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/polygamy/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/polygamy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jlg21/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/jlg21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jsr/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/jsr_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/vanitas-2/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/vanitas-2_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/hamilton/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/hamilton_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/2020-international-video-game-awards-acceptance-speech/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/2020-international-video-game-awards-acceptance-speech_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/mall-santa/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/mall-santa_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/street-fight/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/street-fight_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/bad-days/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/bad-days_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/tv-salesman/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/tv-salesman_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/operation-enduring-freedom/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/operation-enduring-freedom_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/crying-in-the-rain/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/crying-in-the-rain_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/theres-no-more-gazpacho-in-the-cupboard/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/theres-no-more-gazpacho-in-the-cupboard_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/shark-tank-u-s-s-r/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/shark-tank-u-s-s-r_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/j-robert-oppenheimer-signs-an-nda/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/j-robert-oppenheimer-signs-an-nda_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/my-piece-about-what-it-would-be-like-if-i-wrote-a-piece-for-the-fyc/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/my-piece-about-what-it-would-be-like-if-i-wrote-a-piece-for-the-fyc_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/best-picture/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/best-picture_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/how-long-have-you-been-unemployed/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/how-long-have-you-been-unemployed_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/answering-machine/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/answering-machine_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/a-retelling-of-jaws-by-someone-who-has-definitely-seen-it/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/a-retelling-of-jaws-by-someone-who-has-definitely-seen-it_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/a-taste-of-my-own-medicine/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/a-taste-of-my-own-medicine_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/femme-fatale/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/femme-fatale_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/blockbuster/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/for-your-consideration/blockbuster_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/elvis-has-left-the-building/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/elvis-has-left-the-building_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/de-la-comtesse/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/de-la-comtesse_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/sky-diving/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/sky-diving_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/bad-doctors/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/bad-doctors_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/changes/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/changes_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/advice-from-a-car-thief/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/advice-from-a-car-thief_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/gag-gifts/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/gag-gifts_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/my-unhappy-rendezvous-with-magical-realism/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/my-unhappy-rendezvous-with-magical-realism_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/vegas-weatherman/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/vegas-weatherman_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/mortons-mail-order/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/mortons-mail-order_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/life-o-the-party/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/life-o-the-party_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/products-for-the-tough/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/products-for-the-tough_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/tv-harmful-or-just-deadly/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/tv-harmful-or-just-deadly_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/in-the-beef-box/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/in-the-beef-box_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/notes-from-the-under-grateful/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/notes-from-the-under-grateful_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/hold-up/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/hold-up_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/tax-free-encounter/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/tax-free-encounter_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/the-saxophone-player/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/classic-pieces/the-saxophone-player_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-13-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-20-page/ [L,R=301,QSD]
+RewriteRule ^@ESW06$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ESW06/ [L,R=301,QSD]
+RewriteRule ^@ERB$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ERB/ [L,R=301,QSD]
+RewriteRule ^@EFM$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-EFM/ [L,R=301,QSD]
+RewriteRule ^@EAH$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-EAH/ [L,R=301,QSD]
+RewriteRule ^@DNA$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-DNA/ [L,R=301,QSD]
+RewriteRule ^@DJH$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-DJH/ [L,R=301,QSD]
+RewriteRule ^@DHM92$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-DHM92/ [L,R=301,QSD]
+RewriteRule ^@CWW$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-CWW/ [L,R=301,QSD]
+RewriteRule ^@CRS$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-CRS/ [L,R=301,QSD]
+RewriteRule ^@ckj04$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ckj04/ [L,R=301,QSD]
+RewriteRule ^@CGB$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-CGB/ [L,R=301,QSD]
+RewriteRule ^@CCSW$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-CCSW/ [L,R=301,QSD]
+RewriteRule ^@bjn01$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-bjn01/ [L,R=301,QSD]
+RewriteRule ^@asl22$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-asl22/ [L,R=301,QSD]
+RewriteRule ^@AMP$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-AMP/ [L,R=301,QSD]
+RewriteRule ^@ACW$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-ACW/ [L,R=301,QSD]
+RewriteRule ^@AAD$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-AAD/ [L,R=301,QSD]
+RewriteRule ^@samsuchin$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/-samsuchin/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/drm/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/drm_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jfar19/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/jfar19_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/hfj/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/hfj_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/a-man-with-a-limp-and-three-glass-eyes/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/flesh-and-blood/a-man-with-a-limp-and-three-glass-eyes_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/costume-party/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/flesh-and-blood/costume-party_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/eugenics/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/flesh-and-blood/eugenics_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/last-day-at-the-zoo/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/flesh-and-blood/last-day-at-the-zoo_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/ccsw/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/ccsw_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/taf/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/taf_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/mjs/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/mjs_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/cdl21/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/cdl21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jgs20/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/jgs20_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/cas/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/cas_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/bwm19-20/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/bwm19-20_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^larry-vs-the-infernal-machine/gorilla-larry-2/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/larry-vs-the-infernal-machine/gorilla-larry-2_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^equation-for-entropy/krauts/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/equation-for-entropy/krauts_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^equation-for-entropy/my-first-real-piece-ever/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/equation-for-entropy/my-first-real-piece-ever_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/ashes-2/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/smellfungus/ashes-2_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/2019-world-expo/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/smellfungus/2019-world-expo_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/fire-department-tour/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/smellfungus/fire-department-tour_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/fortune-teller-comix/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/smellfungus/fortune-teller-comix_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/half-day/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/smellfungus/half-day_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/marco-polo/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/smellfungus/marco-polo_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/movie-theatre/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/smellfungus/movie-theatre_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/outside-microsoft-hq/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/smellfungus/outside-microsoft-hq_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/st-louis-childrens-theatre-production-company/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/smellfungus/st-louis-childrens-theatre-production-company_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/the-beat-generation/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/smellfungus/the-beat-generation_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/wait-wait-dont-tell-me/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/smellfungus/wait-wait-dont-tell-me_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^hey-you-yeah-you-quit-pulling-my-leg/fat-camp/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/hey-you-yeah-you-quit-pulling-my-leg/fat-camp_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop-ii/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop-ii_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/new-york/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/last-ditch-effort/new-york_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/eulogy-of-george/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/sets-in-the-west/eulogy-of-george_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/goin-west/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/sets-in-the-west/goin-west_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/judge-jury-and-executioner/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/sets-in-the-west/judge-jury-and-executioner_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/president-nice-guy/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/sets-in-the-west/president-nice-guy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/the-dust-bowl/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/sets-in-the-west/the-dust-bowl_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/the-life-of-a-cowboy/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/sets-in-the-west/the-life-of-a-cowboy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^grass-is-greener/online-quiz/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/grass-is-greener/online-quiz_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/good-cop-bad-cop-jelly-donut-cop/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/once-in-a-blue-moon/good-cop-bad-cop-jelly-donut-cop_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/inspired-musings/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/once-in-a-blue-moon/inspired-musings_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/my-fairy/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/once-in-a-blue-moon/my-fairy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/my-feminism/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/once-in-a-blue-moon/my-feminism_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/my-trip-to-cleveland/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/once-in-a-blue-moon/my-trip-to-cleveland_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/rare/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/once-in-a-blue-moon/rare_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/vanitas-4/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/once-in-a-blue-moon/vanitas-4_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68-2/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68-2_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^my-creation-myth/genesis/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/my-creation-myth/genesis_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^my-creation-myth/wwe/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/my-creation-myth/wwe_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/crowdsourcing-request/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/break-of-day/crowdsourcing-request_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/morning-routine/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/break-of-day/morning-routine_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/new-cat/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/break-of-day/new-cat_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/sunglasses/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/break-of-day/sunglasses_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/the-count-of-monte-cristo-returns-to-marseilles/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/break-of-day/the-count-of-monte-cristo-returns-to-marseilles_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/what-i-imagine-summer-camp-is-like/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/break-of-day/what-i-imagine-summer-camp-is-like_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^grass-is-greener/why-i-wish-i-was-a-green-boy-instead-of-a-blue-boy/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/grass-is-greener/why-i-wish-i-was-a-green-boy-instead-of-a-blue-boy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^grass-is-greener/kermit/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/grass-is-greener/kermit_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^grass-is-greener/lawnmower/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/grass-is-greener/lawnmower_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^grass-is-greener/interview/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/grass-is-greener/interview_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^dead-of-night/midnight-train/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/dead-of-night/midnight-train_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^dead-of-night/store-closing/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/dead-of-night/store-closing_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^dead-of-night/vanagon/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/dead-of-night/vanagon_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/my-birth/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/flesh-and-blood/my-birth_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/mak21/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/mak21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jrd22/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/jrd22_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jec21/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/jec21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/mfp23/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/mfp23_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/mav23/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/mav23_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/thank-you-note/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/me-and-my-lovers/thank-you-note_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jpw22/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/jpw22_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/pks21/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/pks21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/gpl21/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/gpl21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/fss21/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/fss21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/ymc21/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/ymc21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/nantucket-sleighride/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/nantucket-sleighride_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/\*classic-pieces/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/issue/-classic-pieces_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/bjn01/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/bjn01_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/wsi74/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/wsi74_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jhu54/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/jhu54_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/gap48/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/author/gap48_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=2&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=2&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-3-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=2&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=2&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=2&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-13-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=3&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-2-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=3&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-3-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=3&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=3&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=3&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-13-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=4&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-2-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=4&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-3-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=4&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=4&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=4&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-13-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-2-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=5&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-3-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-4-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=5&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-13-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=13&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-2-page-13-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=13&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-4-page-13-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=13&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-5-page-13-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=13&page=$
+RewriteRule ^read/works/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/read/works/page-13-page-13-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=2&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=2&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=2&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=2&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=2&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=4&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=4&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=4&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=4&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=4&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=5&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=2&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=3&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-3-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=3&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-3-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=4&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=4&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=4&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=4&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=4&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=5&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=5&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=3&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=4&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=4&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=4&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=4&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=4&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=5&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=4&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=5&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=5&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=5&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=20&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-2-page-20-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=20&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-3-page-20-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=20&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-4-page-20-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=20&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-5-page-20-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=20&page=$
+RewriteRule ^search/?$ /scraping/files/live/harvardlampoon.com_maiaposternack_gmail.com_drp9axqel4/search/page-20-page-20-page-20-page/ [L,R=301,QSD]
+
+# Redirect all extensions to html
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.shtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.phtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.jhtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.htm$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.php$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.aspx$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.asp$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.jsp$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.apk$ $1.html [L,NC,R=301]
+# End: Redirect all extensions to html

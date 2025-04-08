@@ -1,0 +1,838 @@
+# invoke rewrite engine
+RewriteEngine On
+RewriteBase /
+
+Options -Indexes
+<IfModule mod_negotiation.c>
+	Options -MultiViews
+</IfModule>
+
+# Add a trailing slash (/) to a URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.[A-Za-z0-9]*$
+RewriteRule .*[^/]$ %{REQUEST_URI}/ [L,R=301]
+
+# Create pretty URLs
+RewriteRule ^([^/]+)/$ $1.html [S=9]
+RewriteRule ^([^/]+)/([^/]+)/$ $1/$2.html [S=8]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3.html [S=7]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4.html [S=6]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5.html [S=5]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5/$6.html [S=4]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5/$6/$7.html [S=3]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5/$6/$7/$8.html [S=2]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5/$6/$7/$8/$9.html [S=1]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/([^/]+)/$ $1/$2/$3/$4/$5/$6/$7/$8/$9/$10.html
+# End: Create pretty URLs
+
+# Specific redirections
+RewriteRule ^index\.html$ / [L,R=301]
+RewriteRule ^@jln21$ -jln21/ [L,R=301,QSD]
+RewriteRule ^@NGH$ -NGH/ [L,R=301,QSD]
+RewriteRule ^@JTK$ -JTK/ [L,R=301,QSD]
+RewriteRule ^@ymc21$ -ymc21/ [L,R=301,QSD]
+RewriteRule ^@mag21$ -mag21/ [L,R=301,QSD]
+RewriteRule ^@mfp23$ -mfp23/ [L,R=301,QSD]
+RewriteRule ^@GPCP$ -GPCP/ [L,R=301,QSD]
+RewriteRule ^@jrd22$ -jrd22/ [L,R=301,QSD]
+RewriteRule ^@OMA$ -OMA/ [L,R=301,QSD]
+RewriteRule ^@ebc22$ -ebc22/ [L,R=301,QSD]
+RewriteRule ^@FOD$ -FOD/ [L,R=301,QSD]
+RewriteRule ^@CLC$ -CLC/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&$
+RewriteRule ^search/?$ search/page-2-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&$
+RewriteRule ^search/?$ search/page-3-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&$
+RewriteRule ^search/?$ search/page-4-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&$
+RewriteRule ^search/?$ search/page-5-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&$
+RewriteRule ^search/?$ search/page-20-/ [L,R=301,QSD]
+RewriteRule ^@lrk21$ -lrk21/ [L,R=301,QSD]
+RewriteRule ^@TAF$ -TAF/ [L,R=301,QSD]
+RewriteRule ^@bgs22$ -bgs22/ [L,R=301,QSD]
+RewriteRule ^@mmm20$ -mmm20/ [L,R=301,QSD]
+RewriteRule ^@NSG$ -NSG/ [L,R=301,QSD]
+RewriteRule ^@gpl21$ -gpl21/ [L,R=301,QSD]
+RewriteRule ^@jec21$ -jec21/ [L,R=301,QSD]
+RewriteRule ^@SWR$ -SWR/ [L,R=301,QSD]
+RewriteRule ^@cdl21$ -cdl21/ [L,R=301,QSD]
+RewriteRule ^@KPB$ -KPB/ [L,R=301,QSD]
+RewriteRule ^@lgf21$ -lgf21/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&$
+RewriteRule ^read/works/?$ read/works/page-2-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&$
+RewriteRule ^read/works/?$ read/works/page-3-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&$
+RewriteRule ^read/works/?$ read/works/page-4-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&$
+RewriteRule ^read/works/?$ read/works/page-5-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&$
+RewriteRule ^read/works/?$ read/works/page-13-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&$
+RewriteRule ^read/magazines/?$ read/magazines/page-2-/ [L,R=301,QSD]
+RewriteRule ^@JSR$ -JSR/ [L,R=301,QSD]
+RewriteRule ^@ghost$ -ghost/ [L,R=301,QSD]
+RewriteRule ^@AMC$ -AMC/ [L,R=301,QSD]
+RewriteRule ^@gogo$ -gogo/ [L,R=301,QSD]
+RewriteRule ^@test123$ -test123/ [L,R=301,QSD]
+RewriteRule ^@admin$ -admin/ [L,R=301,QSD]
+RewriteRule ^@ZPH$ -ZPH/ [L,R=301,QSD]
+RewriteRule ^@ZDG20$ -ZDG20/ [L,R=301,QSD]
+RewriteRule ^@yj21$ -yj21/ [L,R=301,QSD]
+RewriteRule ^@wsi74$ -wsi74/ [L,R=301,QSD]
+RewriteRule ^@jgs20$ -jgs20/ [L,R=301,QSD]
+RewriteRule ^@wi11dey$ -wi11dey/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=&$
+RewriteRule ^search/?$ search/page--/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=1&$
+RewriteRule ^search/?$ search/page-1-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=6&$
+RewriteRule ^search/?$ search/page-6-/ [L,R=301,QSD]
+RewriteRule ^@HJH19$ -HJH19/ [L,R=301,QSD]
+RewriteRule ^@WBB$ -WBB/ [L,R=301,QSD]
+RewriteRule ^@vin21$ -vin21/ [L,R=301,QSD]
+RewriteRule ^@VG$ -VG/ [L,R=301,QSD]
+RewriteRule ^@TBW$ -TBW/ [L,R=301,QSD]
+RewriteRule ^@sw21$ -sw21/ [L,R=301,QSD]
+RewriteRule ^@svg18$ -svg18/ [L,R=301,QSD]
+RewriteRule ^@skl23$ -skl23/ [L,R=301,QSD]
+RewriteRule ^@HBF$ -HBF/ [L,R=301,QSD]
+RewriteRule ^@sey87$ -sey87/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=7&$
+RewriteRule ^search/?$ search/page-7-/ [L,R=301,QSD]
+RewriteRule ^@scs81$ -scs81/ [L,R=301,QSD]
+RewriteRule ^@RMC95$ -RMC95/ [L,R=301,QSD]
+RewriteRule ^@bwm19-21$ -bwm19-21/ [L,R=301,QSD]
+RewriteRule ^@RIP$ -RIP/ [L,R=301,QSD]
+RewriteRule ^@DJL$ -DJL/ [L,R=301,QSD]
+RewriteRule ^@prs87$ -prs87/ [L,R=301,QSD]
+RewriteRule ^@PKS$ -PKS/ [L,R=301,QSD]
+RewriteRule ^@pam75$ -pam75/ [L,R=301,QSD]
+RewriteRule ^@Owen$ -Owen/ [L,R=301,QSD]
+RewriteRule ^@NHS$ -NHS/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=8&$
+RewriteRule ^search/?$ search/page-8-/ [L,R=301,QSD]
+RewriteRule ^@ngj21$ -ngj21/ [L,R=301,QSD]
+RewriteRule ^@naa21$ -naa21/ [L,R=301,QSD]
+RewriteRule ^@MVS$ -MVS/ [L,R=301,QSD]
+RewriteRule ^@mmw84$ -mmw84/ [L,R=301,QSD]
+RewriteRule ^@fss21$ -fss21/ [L,R=301,QSD]
+RewriteRule ^@anonymous$ -anonymous/ [L,R=301,QSD]
+RewriteRule ^@MJS$ -MJS/ [L,R=301,QSD]
+RewriteRule ^@MGM$ -MGM/ [L,R=301,QSD]
+RewriteRule ^@mav23$ -mav23/ [L,R=301,QSD]
+RewriteRule ^@HHD$ -HHD/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=16&$
+RewriteRule ^search/?$ search/page-16-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=17&$
+RewriteRule ^search/?$ search/page-17-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=18&$
+RewriteRule ^search/?$ search/page-18-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=19&$
+RewriteRule ^search/?$ search/page-19-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^read/?$ read_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^magazines/?$ magazines_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/me-and-my-lovers/?$ issue/me-and-my-lovers_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classics/?$ classics_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^books/?$ books_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^lame-of-thrones-preview/?$ lame-of-thrones-preview_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteRule ^@jlg21$ -jlg21/ [L,R=301,QSD]
+RewriteRule ^@jpw22$ -jpw22/ [L,R=301,QSD]
+RewriteRule ^@DRM$ -DRM/ [L,R=301,QSD]
+RewriteRule ^@jtb20$ -jtb20/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=&$
+RewriteRule ^read/works/?$ read/works/page--/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=1&$
+RewriteRule ^read/works/?$ read/works/page-1-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=6&$
+RewriteRule ^read/works/?$ read/works/page-6-/ [L,R=301,QSD]
+RewriteRule ^@ASB$ -ASB/ [L,R=301,QSD]
+RewriteRule ^@CAS$ -CAS/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=7&$
+RewriteRule ^read/works/?$ read/works/page-7-/ [L,R=301,QSD]
+RewriteRule ^@JFAR19-20$ -JFAR19-20/ [L,R=301,QSD]
+RewriteRule ^@mas18$ -mas18/ [L,R=301,QSD]
+RewriteRule ^@HFJ$ -HFJ/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=8&$
+RewriteRule ^read/works/?$ read/works/page-8-/ [L,R=301,QSD]
+RewriteRule ^@eno21$ -eno21/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=9&$
+RewriteRule ^read/works/?$ read/works/page-9-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=10&$
+RewriteRule ^read/works/?$ read/works/page-10-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=11&$
+RewriteRule ^read/works/?$ read/works/page-11-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=12&$
+RewriteRule ^read/works/?$ read/works/page-12-/ [L,R=301,QSD]
+RewriteRule ^@EAT$ -EAT/ [L,R=301,QSD]
+RewriteRule ^@eliesalem$ -eliesalem/ [L,R=301,QSD]
+RewriteRule ^@mak21$ -mak21/ [L,R=301,QSD]
+RewriteRule ^@AJ$ -AJ/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=&$
+RewriteRule ^read/magazines/?$ read/magazines/page--/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=1&$
+RewriteRule ^read/magazines/?$ read/magazines/page-1-/ [L,R=301,QSD]
+RewriteRule ^@KMM$ -KMM/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=$
+RewriteRule ^search/?$ search/page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=$
+RewriteRule ^search/?$ search/page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=$
+RewriteRule ^search/?$ search/page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=$
+RewriteRule ^search/?$ search/page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=$
+RewriteRule ^search/?$ search/page-20-page/ [L,R=301,QSD]
+RewriteRule ^@MAS$ -MAS/ [L,R=301,QSD]
+RewriteRule ^@m21$ -m21/ [L,R=301,QSD]
+RewriteRule ^@LAS$ -LAS/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=10&$
+RewriteRule ^search/?$ search/page-10-/ [L,R=301,QSD]
+RewriteRule ^@kba76$ -kba76/ [L,R=301,QSD]
+RewriteRule ^@JHU54$ -JHU54/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=11&$
+RewriteRule ^search/?$ search/page-11-/ [L,R=301,QSD]
+RewriteRule ^@JBO$ -JBO/ [L,R=301,QSD]
+RewriteRule ^@JBL93$ -JBL93/ [L,R=301,QSD]
+RewriteRule ^@JAP$ -JAP/ [L,R=301,QSD]
+RewriteRule ^@ishaanprasad$ -ishaanprasad/ [L,R=301,QSD]
+RewriteRule ^@hgh19$ -hgh19/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=12&$
+RewriteRule ^search/?$ search/page-12-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&$
+RewriteRule ^search/?$ search/page-13-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=14&$
+RewriteRule ^search/?$ search/page-14-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=15&$
+RewriteRule ^search/?$ search/page-15-/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^/?$ epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/good-guy/?$ youngandmisunderstood/good-guy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/new-partner/?$ flesh-and-blood/new-partner_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/history-class/?$ youngandmisunderstood/history-class_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/chimney-sweep/?$ flesh-and-blood/chimney-sweep_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^dead-of-night/the-royal-we/?$ dead-of-night/the-royal-we_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/vanitas-3/?$ youngandmisunderstood/vanitas-3_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/fly-on-the-wall/?$ youngandmisunderstood/fly-on-the-wall_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/worried/?$ youngandmisunderstood/worried_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^seasons-of-life/no-more-sheriffs/?$ seasons-of-life/no-more-sheriffs_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^seasons-of-life/bus-driver/?$ seasons-of-life/bus-driver_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^seasons-of-life/exam-locations/?$ seasons-of-life/exam-locations_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^youngandmisunderstood/relationship/?$ youngandmisunderstood/relationship_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/business-presentation/?$ last-ditch-effort/business-presentation_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/middle-school-beauty/?$ last-ditch-effort/middle-school-beauty_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^seasons-of-life/discovery-kids-pilot-episode/?$ seasons-of-life/discovery-kids-pilot-episode_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^all-natural/mr-gardener-and-the-big-conference/?$ all-natural/mr-gardener-and-the-big-conference_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/driving-to-a-burger-joint/?$ last-ditch-effort/driving-to-a-burger-joint_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/fight-song/?$ last-ditch-effort/fight-song_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/hit-that-button/?$ last-ditch-effort/hit-that-button_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/relax/?$ last-ditch-effort/relax_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/the-big-man-on-campus/?$ last-ditch-effort/the-big-man-on-campus_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/two-bailiffs-talk-before-court-starts/?$ last-ditch-effort/two-bailiffs-talk-before-court-starts_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/larry-vs-the-infernal-machine/?$ issue/larry-vs-the-infernal-machine_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/equation-for-entropy/?$ issue/equation-for-entropy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/family-friendly-comedy/?$ issue/family-friendly-comedy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/symphonia-fantastica/?$ issue/symphonia-fantastica_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/smellfungus/?$ issue/smellfungus_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/hey-you-yeah-you-quit-pulling-my-leg/?$ issue/hey-you-yeah-you-quit-pulling-my-leg_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/last-ditch-effort/?$ issue/last-ditch-effort_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/seasons-of-life/?$ issue/seasons-of-life_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/young-and-misunderstood/?$ issue/young-and-misunderstood_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/sets-in-the-west/?$ issue/sets-in-the-west_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/once-in-a-blue-moon/?$ issue/once-in-a-blue-moon_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/my-creation-myth/?$ issue/my-creation-myth_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/break-of-day/?$ issue/break-of-day_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/grass-is-greener/?$ issue/grass-is-greener_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/dead-of-night/?$ issue/dead-of-night_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/flesh-and-blood/?$ issue/flesh-and-blood_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jsr22/?$ author/jsr22_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/lrk21/?$ author/lrk21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/vin21/?$ author/vin21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/vanitas-5/?$ me-and-my-lovers/vanitas-5_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/crocodile-comix/?$ me-and-my-lovers/crocodile-comix_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/retirement-compound-salesman/?$ me-and-my-lovers/retirement-compound-salesman_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/love-song/?$ me-and-my-lovers/love-song_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/the-talk/?$ me-and-my-lovers/the-talk_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/decision-comix/?$ me-and-my-lovers/decision-comix_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/me-and-my-babies/?$ me-and-my-lovers/me-and-my-babies_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/hell/?$ me-and-my-lovers/hell_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/the-talk-throughout-history/?$ me-and-my-lovers/the-talk-throughout-history_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/date-ideas/?$ me-and-my-lovers/date-ideas_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/my-first-crush/?$ me-and-my-lovers/my-first-crush_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/polygamy/?$ me-and-my-lovers/polygamy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jlg21/?$ author/jlg21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jsr/?$ author/jsr_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/vanitas-2/?$ for-your-consideration/vanitas-2_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/hamilton/?$ for-your-consideration/hamilton_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/2020-international-video-game-awards-acceptance-speech/?$ for-your-consideration/2020-international-video-game-awards-acceptance-speech_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/mall-santa/?$ for-your-consideration/mall-santa_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/street-fight/?$ for-your-consideration/street-fight_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/bad-days/?$ for-your-consideration/bad-days_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/tv-salesman/?$ for-your-consideration/tv-salesman_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/operation-enduring-freedom/?$ for-your-consideration/operation-enduring-freedom_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/crying-in-the-rain/?$ for-your-consideration/crying-in-the-rain_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/theres-no-more-gazpacho-in-the-cupboard/?$ for-your-consideration/theres-no-more-gazpacho-in-the-cupboard_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/shark-tank-u-s-s-r/?$ for-your-consideration/shark-tank-u-s-s-r_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/j-robert-oppenheimer-signs-an-nda/?$ for-your-consideration/j-robert-oppenheimer-signs-an-nda_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/my-piece-about-what-it-would-be-like-if-i-wrote-a-piece-for-the-fyc/?$ for-your-consideration/my-piece-about-what-it-would-be-like-if-i-wrote-a-piece-for-the-fyc_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/best-picture/?$ for-your-consideration/best-picture_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/how-long-have-you-been-unemployed/?$ for-your-consideration/how-long-have-you-been-unemployed_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/answering-machine/?$ for-your-consideration/answering-machine_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/a-retelling-of-jaws-by-someone-who-has-definitely-seen-it/?$ for-your-consideration/a-retelling-of-jaws-by-someone-who-has-definitely-seen-it_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/a-taste-of-my-own-medicine/?$ for-your-consideration/a-taste-of-my-own-medicine_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/femme-fatale/?$ for-your-consideration/femme-fatale_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^for-your-consideration/blockbuster/?$ for-your-consideration/blockbuster_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/elvis-has-left-the-building/?$ classic-pieces/elvis-has-left-the-building_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/de-la-comtesse/?$ classic-pieces/de-la-comtesse_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/sky-diving/?$ classic-pieces/sky-diving_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/bad-doctors/?$ classic-pieces/bad-doctors_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/changes/?$ classic-pieces/changes_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/advice-from-a-car-thief/?$ classic-pieces/advice-from-a-car-thief_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/gag-gifts/?$ classic-pieces/gag-gifts_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/my-unhappy-rendezvous-with-magical-realism/?$ classic-pieces/my-unhappy-rendezvous-with-magical-realism_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/vegas-weatherman/?$ classic-pieces/vegas-weatherman_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/mortons-mail-order/?$ classic-pieces/mortons-mail-order_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/life-o-the-party/?$ classic-pieces/life-o-the-party_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/products-for-the-tough/?$ classic-pieces/products-for-the-tough_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/tv-harmful-or-just-deadly/?$ classic-pieces/tv-harmful-or-just-deadly_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/in-the-beef-box/?$ classic-pieces/in-the-beef-box_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/notes-from-the-under-grateful/?$ classic-pieces/notes-from-the-under-grateful_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/hold-up/?$ classic-pieces/hold-up_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/tax-free-encounter/?$ classic-pieces/tax-free-encounter_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^classic-pieces/the-saxophone-player/?$ classic-pieces/the-saxophone-player_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=$
+RewriteRule ^read/works/?$ read/works/page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=$
+RewriteRule ^read/works/?$ read/works/page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=$
+RewriteRule ^read/works/?$ read/works/page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=$
+RewriteRule ^read/works/?$ read/works/page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=$
+RewriteRule ^read/works/?$ read/works/page-13-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=2&page=$
+RewriteRule ^search/?$ search/page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=2&page=$
+RewriteRule ^search/?$ search/page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=2&page=$
+RewriteRule ^search/?$ search/page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=2&page=$
+RewriteRule ^search/?$ search/page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=3&page=$
+RewriteRule ^search/?$ search/page-3-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=3&page=$
+RewriteRule ^search/?$ search/page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=3&page=$
+RewriteRule ^search/?$ search/page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=3&page=$
+RewriteRule ^search/?$ search/page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=4&page=$
+RewriteRule ^search/?$ search/page-2-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=4&page=$
+RewriteRule ^search/?$ search/page-3-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=4&page=$
+RewriteRule ^search/?$ search/page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=4&page=$
+RewriteRule ^search/?$ search/page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=4&page=$
+RewriteRule ^search/?$ search/page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=$
+RewriteRule ^search/?$ search/page-2-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=5&page=$
+RewriteRule ^search/?$ search/page-3-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=$
+RewriteRule ^search/?$ search/page-4-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=$
+RewriteRule ^search/?$ search/page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=5&page=$
+RewriteRule ^search/?$ search/page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=$
+RewriteRule ^search/?$ search/page-2-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=$
+RewriteRule ^search/?$ search/page-3-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=$
+RewriteRule ^search/?$ search/page-4-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=$
+RewriteRule ^search/?$ search/page-5-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=$
+RewriteRule ^search/?$ search/page-20-page-20-page/ [L,R=301,QSD]
+RewriteRule ^@ESW06$ -ESW06/ [L,R=301,QSD]
+RewriteRule ^@ERB$ -ERB/ [L,R=301,QSD]
+RewriteRule ^@EFM$ -EFM/ [L,R=301,QSD]
+RewriteRule ^@EAH$ -EAH/ [L,R=301,QSD]
+RewriteRule ^@DNA$ -DNA/ [L,R=301,QSD]
+RewriteRule ^@DJH$ -DJH/ [L,R=301,QSD]
+RewriteRule ^@DHM92$ -DHM92/ [L,R=301,QSD]
+RewriteRule ^@CWW$ -CWW/ [L,R=301,QSD]
+RewriteRule ^@CRS$ -CRS/ [L,R=301,QSD]
+RewriteRule ^@ckj04$ -ckj04/ [L,R=301,QSD]
+RewriteRule ^@CGB$ -CGB/ [L,R=301,QSD]
+RewriteRule ^@CCSW$ -CCSW/ [L,R=301,QSD]
+RewriteRule ^@bjn01$ -bjn01/ [L,R=301,QSD]
+RewriteRule ^@asl22$ -asl22/ [L,R=301,QSD]
+RewriteRule ^@AMP$ -AMP/ [L,R=301,QSD]
+RewriteRule ^@ACW$ -ACW/ [L,R=301,QSD]
+RewriteRule ^@AAD$ -AAD/ [L,R=301,QSD]
+RewriteRule ^@samsuchin$ -samsuchin/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/drm/?$ author/drm_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jfar19/?$ author/jfar19_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/hfj/?$ author/hfj_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/a-man-with-a-limp-and-three-glass-eyes/?$ flesh-and-blood/a-man-with-a-limp-and-three-glass-eyes_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/costume-party/?$ flesh-and-blood/costume-party_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/eugenics/?$ flesh-and-blood/eugenics_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/last-day-at-the-zoo/?$ flesh-and-blood/last-day-at-the-zoo_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/ccsw/?$ author/ccsw_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/taf/?$ author/taf_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/mjs/?$ author/mjs_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/cdl21/?$ author/cdl21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jgs20/?$ author/jgs20_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/cas/?$ author/cas_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/bwm19-20/?$ author/bwm19-20_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^larry-vs-the-infernal-machine/gorilla-larry-2/?$ larry-vs-the-infernal-machine/gorilla-larry-2_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^equation-for-entropy/krauts/?$ equation-for-entropy/krauts_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^equation-for-entropy/my-first-real-piece-ever/?$ equation-for-entropy/my-first-real-piece-ever_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/ashes-2/?$ smellfungus/ashes-2_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/2019-world-expo/?$ smellfungus/2019-world-expo_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/fire-department-tour/?$ smellfungus/fire-department-tour_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/fortune-teller-comix/?$ smellfungus/fortune-teller-comix_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/half-day/?$ smellfungus/half-day_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/marco-polo/?$ smellfungus/marco-polo_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/movie-theatre/?$ smellfungus/movie-theatre_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/outside-microsoft-hq/?$ smellfungus/outside-microsoft-hq_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/st-louis-childrens-theatre-production-company/?$ smellfungus/st-louis-childrens-theatre-production-company_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/the-beat-generation/?$ smellfungus/the-beat-generation_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^smellfungus/wait-wait-dont-tell-me/?$ smellfungus/wait-wait-dont-tell-me_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^hey-you-yeah-you-quit-pulling-my-leg/fat-camp/?$ hey-you-yeah-you-quit-pulling-my-leg/fat-camp_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop/?$ hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop-ii/?$ hey-you-yeah-you-quit-pulling-my-leg/texting-on-my-laptop-ii_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^last-ditch-effort/new-york/?$ last-ditch-effort/new-york_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/eulogy-of-george/?$ sets-in-the-west/eulogy-of-george_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/goin-west/?$ sets-in-the-west/goin-west_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/judge-jury-and-executioner/?$ sets-in-the-west/judge-jury-and-executioner_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/president-nice-guy/?$ sets-in-the-west/president-nice-guy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/the-dust-bowl/?$ sets-in-the-west/the-dust-bowl_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^sets-in-the-west/the-life-of-a-cowboy/?$ sets-in-the-west/the-life-of-a-cowboy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^grass-is-greener/online-quiz/?$ grass-is-greener/online-quiz_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/good-cop-bad-cop-jelly-donut-cop/?$ once-in-a-blue-moon/good-cop-bad-cop-jelly-donut-cop_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/inspired-musings/?$ once-in-a-blue-moon/inspired-musings_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/my-fairy/?$ once-in-a-blue-moon/my-fairy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/my-feminism/?$ once-in-a-blue-moon/my-feminism_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/my-trip-to-cleveland/?$ once-in-a-blue-moon/my-trip-to-cleveland_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/rare/?$ once-in-a-blue-moon/rare_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^once-in-a-blue-moon/vanitas-4/?$ once-in-a-blue-moon/vanitas-4_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68-2/?$ my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68-2_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^my-creation-myth/genesis/?$ my-creation-myth/genesis_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68/?$ my-creation-myth/guest-lecture-by-joseph-campbell-at-university-of-chicago-transcript-11-24-68_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^my-creation-myth/wwe/?$ my-creation-myth/wwe_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/crowdsourcing-request/?$ break-of-day/crowdsourcing-request_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/morning-routine/?$ break-of-day/morning-routine_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/new-cat/?$ break-of-day/new-cat_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/sunglasses/?$ break-of-day/sunglasses_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/the-count-of-monte-cristo-returns-to-marseilles/?$ break-of-day/the-count-of-monte-cristo-returns-to-marseilles_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^break-of-day/what-i-imagine-summer-camp-is-like/?$ break-of-day/what-i-imagine-summer-camp-is-like_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^grass-is-greener/why-i-wish-i-was-a-green-boy-instead-of-a-blue-boy/?$ grass-is-greener/why-i-wish-i-was-a-green-boy-instead-of-a-blue-boy_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^grass-is-greener/kermit/?$ grass-is-greener/kermit_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^grass-is-greener/lawnmower/?$ grass-is-greener/lawnmower_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^grass-is-greener/interview/?$ grass-is-greener/interview_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^dead-of-night/midnight-train/?$ dead-of-night/midnight-train_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^dead-of-night/store-closing/?$ dead-of-night/store-closing_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^dead-of-night/vanagon/?$ dead-of-night/vanagon_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^flesh-and-blood/my-birth/?$ flesh-and-blood/my-birth_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/mak21/?$ author/mak21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jrd22/?$ author/jrd22_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jec21/?$ author/jec21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/mfp23/?$ author/mfp23_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/mav23/?$ author/mav23_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^me-and-my-lovers/thank-you-note/?$ me-and-my-lovers/thank-you-note_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jpw22/?$ author/jpw22_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/pks21/?$ author/pks21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/gpl21/?$ author/gpl21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/fss21/?$ author/fss21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/ymc21/?$ author/ymc21_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/nantucket-sleighride/?$ issue/nantucket-sleighride_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^issue/\*classic-pieces/?$ issue/-classic-pieces_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/bjn01/?$ author/bjn01_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/wsi74/?$ author/wsi74_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/jhu54/?$ author/jhu54_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^epcl-action=remove-notice$
+RewriteRule ^author/gap48/?$ author/gap48_epcl-action-remove-notice/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=2&page=$
+RewriteRule ^read/works/?$ read/works/page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=2&page=$
+RewriteRule ^read/works/?$ read/works/page-3-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=2&page=$
+RewriteRule ^read/works/?$ read/works/page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=2&page=$
+RewriteRule ^read/works/?$ read/works/page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=2&page=$
+RewriteRule ^read/works/?$ read/works/page-13-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=3&page=$
+RewriteRule ^read/works/?$ read/works/page-2-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=3&page=$
+RewriteRule ^read/works/?$ read/works/page-3-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=3&page=$
+RewriteRule ^read/works/?$ read/works/page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=3&page=$
+RewriteRule ^read/works/?$ read/works/page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=3&page=$
+RewriteRule ^read/works/?$ read/works/page-13-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=4&page=$
+RewriteRule ^read/works/?$ read/works/page-2-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=4&page=$
+RewriteRule ^read/works/?$ read/works/page-3-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=4&page=$
+RewriteRule ^read/works/?$ read/works/page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=4&page=$
+RewriteRule ^read/works/?$ read/works/page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=4&page=$
+RewriteRule ^read/works/?$ read/works/page-13-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=$
+RewriteRule ^read/works/?$ read/works/page-2-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=5&page=$
+RewriteRule ^read/works/?$ read/works/page-3-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=$
+RewriteRule ^read/works/?$ read/works/page-4-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=$
+RewriteRule ^read/works/?$ read/works/page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=5&page=$
+RewriteRule ^read/works/?$ read/works/page-13-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=13&page=$
+RewriteRule ^read/works/?$ read/works/page-2-page-13-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=13&page=$
+RewriteRule ^read/works/?$ read/works/page-4-page-13-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=13&page=$
+RewriteRule ^read/works/?$ read/works/page-5-page-13-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=13&page=13&page=$
+RewriteRule ^read/works/?$ read/works/page-13-page-13-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=2&page=2&page=$
+RewriteRule ^search/?$ search/page-2-page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=2&page=2&page=$
+RewriteRule ^search/?$ search/page-3-page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=2&page=2&page=$
+RewriteRule ^search/?$ search/page-4-page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=2&page=2&page=$
+RewriteRule ^search/?$ search/page-5-page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=2&page=2&page=$
+RewriteRule ^search/?$ search/page-20-page-2-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=4&page=2&page=$
+RewriteRule ^search/?$ search/page-2-page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=4&page=2&page=$
+RewriteRule ^search/?$ search/page-3-page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=4&page=2&page=$
+RewriteRule ^search/?$ search/page-4-page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=4&page=2&page=$
+RewriteRule ^search/?$ search/page-5-page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=4&page=2&page=$
+RewriteRule ^search/?$ search/page-20-page-4-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=2&page=$
+RewriteRule ^search/?$ search/page-2-page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=2&page=$
+RewriteRule ^search/?$ search/page-4-page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=2&page=$
+RewriteRule ^search/?$ search/page-5-page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=5&page=2&page=$
+RewriteRule ^search/?$ search/page-20-page-5-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=2&page=$
+RewriteRule ^search/?$ search/page-2-page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=2&page=$
+RewriteRule ^search/?$ search/page-3-page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=2&page=$
+RewriteRule ^search/?$ search/page-4-page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=2&page=$
+RewriteRule ^search/?$ search/page-5-page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=2&page=$
+RewriteRule ^search/?$ search/page-20-page-20-page-2-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=3&page=3&page=$
+RewriteRule ^search/?$ search/page-2-page-3-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=3&page=3&page=$
+RewriteRule ^search/?$ search/page-5-page-3-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=4&page=3&page=$
+RewriteRule ^search/?$ search/page-2-page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=4&page=3&page=$
+RewriteRule ^search/?$ search/page-3-page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=4&page=3&page=$
+RewriteRule ^search/?$ search/page-4-page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=4&page=3&page=$
+RewriteRule ^search/?$ search/page-5-page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=4&page=3&page=$
+RewriteRule ^search/?$ search/page-20-page-4-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=3&page=$
+RewriteRule ^search/?$ search/page-2-page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=5&page=3&page=$
+RewriteRule ^search/?$ search/page-3-page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=3&page=$
+RewriteRule ^search/?$ search/page-4-page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=3&page=$
+RewriteRule ^search/?$ search/page-5-page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=5&page=3&page=$
+RewriteRule ^search/?$ search/page-20-page-5-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=3&page=$
+RewriteRule ^search/?$ search/page-2-page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=3&page=$
+RewriteRule ^search/?$ search/page-3-page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=3&page=$
+RewriteRule ^search/?$ search/page-4-page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=3&page=$
+RewriteRule ^search/?$ search/page-5-page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=3&page=$
+RewriteRule ^search/?$ search/page-20-page-20-page-3-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=4&page=4&page=$
+RewriteRule ^search/?$ search/page-2-page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=4&page=4&page=$
+RewriteRule ^search/?$ search/page-3-page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=4&page=4&page=$
+RewriteRule ^search/?$ search/page-4-page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=4&page=4&page=$
+RewriteRule ^search/?$ search/page-5-page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=4&page=4&page=$
+RewriteRule ^search/?$ search/page-20-page-4-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=4&page=$
+RewriteRule ^search/?$ search/page-2-page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=5&page=4&page=$
+RewriteRule ^search/?$ search/page-3-page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=4&page=$
+RewriteRule ^search/?$ search/page-4-page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=4&page=$
+RewriteRule ^search/?$ search/page-5-page-5-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=4&page=$
+RewriteRule ^search/?$ search/page-2-page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=4&page=$
+RewriteRule ^search/?$ search/page-3-page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=4&page=$
+RewriteRule ^search/?$ search/page-4-page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=4&page=$
+RewriteRule ^search/?$ search/page-5-page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=4&page=$
+RewriteRule ^search/?$ search/page-20-page-20-page-4-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=5&page=5&page=$
+RewriteRule ^search/?$ search/page-2-page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=5&page=5&page=$
+RewriteRule ^search/?$ search/page-3-page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=5&page=5&page=$
+RewriteRule ^search/?$ search/page-4-page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=5&page=5&page=$
+RewriteRule ^search/?$ search/page-5-page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=5&page=5&page=$
+RewriteRule ^search/?$ search/page-20-page-5-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=5&page=$
+RewriteRule ^search/?$ search/page-2-page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=5&page=$
+RewriteRule ^search/?$ search/page-3-page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=5&page=$
+RewriteRule ^search/?$ search/page-4-page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=5&page=$
+RewriteRule ^search/?$ search/page-5-page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=5&page=$
+RewriteRule ^search/?$ search/page-20-page-20-page-5-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=2&page=20&page=20&page=$
+RewriteRule ^search/?$ search/page-2-page-20-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=3&page=20&page=20&page=$
+RewriteRule ^search/?$ search/page-3-page-20-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=4&page=20&page=20&page=$
+RewriteRule ^search/?$ search/page-4-page-20-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=5&page=20&page=20&page=$
+RewriteRule ^search/?$ search/page-5-page-20-page-20-page/ [L,R=301,QSD]
+RewriteCond %{QUERY_STRING} ^page=20&page=20&page=20&page=$
+RewriteRule ^search/?$ search/page-20-page-20-page-20-page/ [L,R=301,QSD]
+
+# Redirect all extensions to html
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.shtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.phtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.jhtml$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.htm$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.php$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.aspx$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.asp$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.jsp$ $1.html [L,NC,R=301]
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)\.apk$ $1.html [L,NC,R=301]
+# End: Redirect all extensions to html

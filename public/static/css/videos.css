@@ -1,0 +1,52 @@
+div#lcol {
+	width:64%;
+}
+
+div#lcol h2 {
+	text-align:left;
+	margin:15px 5px 0px 0px;
+	display:inline;
+}
+
+div#lcol h3 {
+	text-align:left;
+	margin:10px 0px;
+	display:inline;
+}
+
+span#byline {
+	width:inherit;
+	white-space:nowrap;
+}
+
+div#activevideo {
+	margin:25px auto 0px auto;
+	text-align:center;
+}
+
+div#activevideo iframe {
+	width:614px;
+}
+
+div#rcol {
+	width:28%;
+	overflow:auto;
+}
+
+div.videoblurb {
+	width:100%;
+	overflow:auto;
+	margin:0px 0px 15px 0px;
+}
+
+div.blurbtitle {
+	width:60%;
+	font-weight:bold;
+	float:right;
+	display:inline;
+}
+
+img.thumb {
+	width:35%;
+	float:left;
+}

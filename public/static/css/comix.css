@@ -1,0 +1,64 @@
+div#lcol {
+	width:700px;
+}
+
+div#lcol h2 {
+	text-align:left;
+	margin:20px 5px 0px 0px;
+	display:inline;
+}
+
+div#lcol h3 {
+	text-align:left;
+	margin:10px 0px;
+	display:inline;
+}
+
+span#byline {
+	width:inherit;
+	white-space:nowrap;
+}
+
+div#activecomic {
+	margin:20px 0px 0px 0px;
+    text-align:center;
+}
+
+div#activecomic img {
+    max-width:660px;
+    max-height:580px;
+}
+
+ul#comixnav {
+	width:67%;
+	text-align:right;
+	float:left;
+	margin-top:15px;
+}
+
+ul#comixnav li {
+	display:inline;
+	padding:10px;
+
+	font-family:Market;
+	font-size:18px;
+}
+
+ul#comixnav li a {
+	color:#3c2850;
+}
+
+ul#comixnav li:hover > a {
+	color:#503a67;
+}
+
+div#rcol {
+	width:185px;
+	overflow:auto;
+	text-align:left;
+}
+
+img.thumb {
+	width:100%;
+	float:left;
+}
