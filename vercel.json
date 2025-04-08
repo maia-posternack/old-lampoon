@@ -1,9 +1,12 @@
 {
-    "rewrites": [
-      {
-        "source": "/comedy/:slug",
-        "destination": "/comedy/:slug.html"
-      }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/comedy/:slug/",
+      "destination": "/comedy/:slug.html"
+    },
+    {
+      "source": "/comedy/:slug",
+      "destination": "/comedy/:slug.html"
+    }
+  ]
+}
