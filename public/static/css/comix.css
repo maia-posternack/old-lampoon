@@ -1,17 +1,13 @@
 div#lcol {
-	width:700px;
+    width: 700px;
+    margin: 0 auto; /* Centers the div horizontally */
+    text-align: center; /* Ensures child elements are centered */
 }
 
-div#lcol h2 {
-	text-align:left;
-	margin:20px 5px 0px 0px;
-	display:inline;
-}
-
-div#lcol h3 {
-	text-align:left;
-	margin:10px 0px;
-	display:inline;
+div#lcol h2, div#lcol h3 {
+    text-align: center; /* Centers the text inside h2 and h3 */
+    margin: 10px 0; /* Adjust margins for better spacing */
+    display: block; /* Ensures proper block-level alignment */
 }
 
 span#byline {
