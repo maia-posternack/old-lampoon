@@ -2,6 +2,7 @@ div#lcol {
     width: 700px;
     margin: 0 auto; /* Centers the div horizontally */
     text-align: center; /* Ensures child elements are centered */
+	transform: translateX(100px)
 }
 
 div#lcol h2, div#lcol h3 {
